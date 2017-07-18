@@ -1,5 +1,5 @@
 /*
-  * An selection sort algorithm is slow and simple;
+  * A selection sort algorithm is slow and simple;
   * The execution time is O( n^2 );
 */
 function findSmallest(arr) {
