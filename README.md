@@ -1,10 +1,10 @@
 # junk-drawer
 Different things
 
-## ribbon-calculator
+## Ribbon calculator
 
 ### Description
-Nice form that wrote on pure javascript and css. This project is just an attempt to use a flexbox layout, a some material design principles and a gulp task runner.
+Nice form that wrote in native JavaScript and css. This project is just an attempt to use a flexbox layout, a some material design principles and a gulp task runner.
 
 ### Demo
 Demo on my youtube [channel](https://www.youtube.com/watch?v=427VRbzOT-M).
@@ -28,5 +28,6 @@ Interactive map ( v1 ) written in native JavaScript. It work via easy SVG manipu
 Version 2 ( v2 ) was written in JavaScript using a library Snap.svg.
 
 ### Demo
-*Demo v1 on my youtube [channel](https://youtu.be/J5P-4pHzh6E).
-*Demo v2 on my youtube [channel](https://youtu.be/PLgkDVAbYQk).
+Demo on my youtube channel:
+- [version 1](https://youtu.be/J5P-4pHzh6E).
+- [version 2](https://youtu.be/PLgkDVAbYQk).
