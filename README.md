@@ -28,5 +28,5 @@ Interactive map ( v1 ) written in native JavaScript. It work via easy SVG manipu
 Version 2 ( v2 ) was written in JavaScript using a library Snap.svg.
 
 ### Demo
-Demo v1 on my youtube [channel](https://youtu.be/J5P-4pHzh6E).
-Demo v2 on my youtube [channel](https://youtu.be/PLgkDVAbYQk).
+*Demo v1 on my youtube [channel](https://youtu.be/J5P-4pHzh6E).
+*Demo v2 on my youtube [channel](https://youtu.be/PLgkDVAbYQk).

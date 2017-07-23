@@ -26,6 +26,10 @@ h2 {
   max-height: auto;
 }
 
+.shape {
+  cursor: pointer;
+}
+
 image.not-active-image {
   transition: opacity 1s;
   opacity: 0;
