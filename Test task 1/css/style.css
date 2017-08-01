@@ -1,0 +1,130 @@
+/* ------------------------------------ adjustments ------------------------------------ */
+
+@font-face { 
+  font-family: "Roboto";
+  src: url('./../fonts/RobotoRegular/RobotoRegular.eot');
+  src: url('./../fonts/RobotoRegular/RobotoRegular.eot?#iefix') format('embedded-opentype'),
+       url('./../fonts/RobotoRegular/RobotoRegular.woff') format('woff'),
+       url('./../fonts/RobotoRegular/RobotoRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url('./../fonts/RobotoBold/RobotoBold.eot');
+  src: url('./../fonts/RobotoBold/RobotoBold.eot?#iefix') format('embedded-opentype'),
+       url('./../fonts/RobotoBold/RobotoBold.woff') format('woff'),
+       url('./../fonts/RobotoBold/RobotoBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url('./../fonts/RobotoBlack/Roboto-Black.eot');
+  src: url('./../fonts/RobotoBlack/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+       url('./../fonts/RobotoBlack/Roboto-Black.woff') format('woff'),
+       url('./../fonts/RobotoBlack/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  background-image: url('./../images/pattern.png');
+  background-size: 250px;
+  width: 100%;
+  height: 100%;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.42;
+}
+
+/* --- header-top --- */
+
+.header__top {
+  background-color: #f5f5f5;
+  height: 35px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.container {
+  width: 962px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu, .auth {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.welcome, .menu__link, .auth__link {
+  color: #666;
+}
+
+.menu__link, .auth__link {
+  border-bottom: 1px solid #666;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.auth__item:not(:last-child) {
+  padding-right: 7px;
+  border-right: 1px solid #666;
+}
+
+.auth__item:last-child {
+  padding-left: 7px;
+}
+
+
+/* --- header-middle --- */
+
+.header__middle {
+  height: 115px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.logo__pic {
+  max-height: 85px;
+  max-width: 132px;
+}

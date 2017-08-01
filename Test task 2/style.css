@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+@import url('https://fonts.googleapis.com/css?family=Prata');
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1.42;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 14px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  flex-basis: 1280px;
+  margin: 0 auto;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 140px;
+}
+
+
+/* ----- Меню фильтров ----- */
+
+.filter {
+  margin-top: 60px;
+  margin-right: 30px;
+}
+
+.filter__group-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 300;
+}
+
+.filter__group-item {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.filter__group-item_left {
+  flex-basis: 70%;
+}
+
+.filter__group-item_right {
+  flex-basis: 30%;
+}
+
+.filter__list {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+}
+
+.filter__list_left {
+  justify-content: flex-start;
+}
+
+.filter__list_right {
+  justify-content: flex-end;
+}
+
+.filter__item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.filter__item:hover {
+  color: #c48f55;
+}
+
+.filter__item:after {
+  content: url(images/arrow_down.svg);
+  margin-left: 10px;
+  line-height: 100%;
+}
+
+.filter__item_iconed:before {
+  content: url(images/icon_bar_chart.svg);
+  margin: 0 10px;
+}
+
+
+/* ----- Каталог товаров ----- */
+
+.product {
+  margin-right: 30px;
+}
+
+.product__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.product__item {
+  margin-top: 120px;
+}
+
+.product__item_armchair .product__pic {
+  width: 459px;
+  height: 459px;
+}
+
+
+.product__item_armchair:nth-child(4n) .product__pic,
+.product__item_armchair:nth-child(4n+1) .product__pic {
+  width: 361px;
+  height: 361px;
+}
+
+.product__item:first-child .product__pic,
+.product__item:last-child .product__pic {
+  width: 262px;
+  height: 262px;
+}
+
+.product__item_sofa .product__pic {
+  width: 555px;
+  height: 360px;
+}
+
+
+.product__available {
+  display: inline-block;
+  overflow: hidden;  
+  width: 1.42em;
+  position: absolute;
+}
+
+.product__available_salon {
+  color: #c48f55;
+}
+
+.accessory {
+  display: inline-block;
+  white-space: nowrap;
+  transform: translate(-10%,100%) rotate(-90deg);
+  transform-origin: 0 0;
+  text-transform: uppercase;
+}
+
+.accessory:after {
+  content: "";
+  float: left;
+  margin-top: 100%;
+}
+
+.product__info {
+  margin-left: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.product__pic {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+
+}
+
+.product__pic-background {
+  background-color: rgba(0,0,0,.04);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.product__pic-img {
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+}
+
+.product__code {
+  margin-top: 40px;
+  color: rgb(163,163,163);
+  text-transform: uppercase;
+}
+
+.product__name {
+  font-family: 'Prata', serif;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.product__name:after {
+  content: "";
+  background: url(images/arrow_right.svg) no-repeat;
+  width: 21px;
+  height: 17px;
+  position: absolute;
+  margin-left: 20px;
+}
+
+.product__price {
+  margin-top: 25px;
+  font-weight: 700;
+  color: #c48f55;
+  text-transform: uppercase;
+}
+
+.product__price_val:before,
+.product__price_query:before {
+  content: "—";
+  font-weight: 300;
+  margin-right: 7px;
+}
+
+.product__price_val:after {
+  content: "Руб.";
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #000;
+  margin-left: 7px;
+}
+
+.product__price_query {
+  font-weight: 300;
+}
