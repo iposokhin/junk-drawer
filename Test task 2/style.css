@@ -27,29 +27,26 @@ a {
 html {
   width: 100%;
   height: 100%;
+  line-height: 1.42;
+  font-size: 14px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
 }
 
 body {
   width: 100%;
-  height: 100%;
-  line-height: 1.42;
-  background-color: #fff;
-  display: flex;
-  flex-flow: row wrap;
-  font-size: 14px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  height: 100%; 
 }
 
 .container {
   max-width: 1400px;
-  flex-basis: 1280px;
+  width: 91.42857142857143%;
   margin: 0 auto;
-  background-color: #fff;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0 140px;
+  padding: 0 10%;
 }
 
 
@@ -60,46 +57,18 @@ body {
   margin-right: 30px;
 }
 
-.filter__group-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: 300;
-}
-
-.filter__group-item {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.filter__group-item_left {
-  flex-basis: 70%;
-}
-
-.filter__group-item_right {
-  flex-basis: 30%;
-}
 
 .filter__list {
   display: flex;
-  flex-flow: row wrap;
-  flex-basis: 100%;
-}
-
-.filter__list_left {
-  justify-content: flex-start;
-}
-
-.filter__list_right {
-  justify-content: flex-end;
+  flex-flow: row nowrap;
+  width: 100%;
 }
 
 .filter__item {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   cursor: pointer;
   margin-left: 30px;
+  white-space: nowrap;
+  font-size: 1em;
 }
 
 .filter__item:hover {
@@ -117,11 +86,16 @@ body {
   margin: 0 10px;
 }
 
+.filter__item_right {
+  margin-left: auto;
+  padding-left: 55px;
+}
+
 
 /* ----- Каталог товаров ----- */
 
 .product {
-  margin-right: 30px;
+  margin-right: 2.34375%;
 }
 
 .product__list {
@@ -133,30 +107,6 @@ body {
 .product__item {
   margin-top: 120px;
 }
-
-.product__item_armchair .product__pic {
-  width: 459px;
-  height: 459px;
-}
-
-
-.product__item_armchair:nth-child(4n) .product__pic,
-.product__item_armchair:nth-child(4n+1) .product__pic {
-  width: 361px;
-  height: 361px;
-}
-
-.product__item:first-child .product__pic,
-.product__item:last-child .product__pic {
-  width: 262px;
-  height: 262px;
-}
-
-.product__item_sofa .product__pic {
-  width: 555px;
-  height: 360px;
-}
-
 
 .product__available {
   display: inline-block;
@@ -195,7 +145,29 @@ body {
   overflow: hidden;
   display: flex;
   flex-flow: row nowrap;
+}
 
+.product__item_armchair .product__pic {
+  width: 459px;
+  height: 459px;
+}
+
+
+.product__item_armchair:nth-child(4n) .product__pic,
+.product__item_armchair:nth-child(4n+1) .product__pic {
+  width: 361px;
+  height: 361px;
+}
+
+.product__item:first-child .product__pic,
+.product__item:last-child .product__pic {
+  width: 262px;
+  height: 262px;
+}
+
+.product__item_sofa .product__pic {
+  width: 555px;
+  height: 360px;
 }
 
 .product__pic-background {
