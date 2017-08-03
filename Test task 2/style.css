@@ -95,7 +95,7 @@ body {
 /* ----- Каталог товаров ----- */
 
 .product {
-  margin-right: 2.34375%;
+  margin-right: 30px;
 }
 
 .product__list {
@@ -105,7 +105,36 @@ body {
 }
 
 .product__item {
-  margin-top: 120px;
+  margin-top: 12.08935240361512%;
+  overflow: hidden;
+  background: rgba(0,0,0,.05);
+}
+
+.product__item_armchair {
+  width: 50%;
+  height: 585px;
+}
+
+.product__item_armchair:nth-child(4n),
+.product__item_armchair:nth-child(4n+1) {
+  width: 40%;
+  height: 585px;
+}
+
+.product__item:first-child,
+.product__item:last-child {
+  width: 30%;
+  height: 485px;
+}
+
+.product__item_sofa {
+  width: 60%;
+  height: 485px;
+}
+
+.product__link {
+  width: 100%;
+  height: inherit;
 }
 
 .product__available {
@@ -138,96 +167,6 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-}
-
-.product__pic {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.product__item_armchair .product__pic {
-  width: 459px;
-  height: 459px;
-}
-
-
-.product__item_armchair:nth-child(4n) .product__pic,
-.product__item_armchair:nth-child(4n+1) .product__pic {
-  width: 361px;
-  height: 361px;
-}
-
-.product__item:first-child .product__pic,
-.product__item:last-child .product__pic {
-  width: 262px;
-  height: 262px;
-}
-
-.product__item_sofa .product__pic {
-  width: 555px;
-  height: 360px;
-}
-
-.product__pic-background {
-  background-color: rgba(0,0,0,.04);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
-.product__pic-img {
-  max-width: 80%;
-  max-height: 80%;
-  margin: auto;
-}
-
-.product__code {
-  margin-top: 40px;
-  color: rgb(163,163,163);
-  text-transform: uppercase;
-}
-
-.product__name {
-  font-family: 'Prata', serif;
-  font-size: 16px;
-  margin-top: 15px;
-}
-
-.product__name:after {
-  content: "";
-  background: url(images/arrow_right.svg) no-repeat;
-  width: 21px;
-  height: 17px;
-  position: absolute;
-  margin-left: 20px;
-}
-
-.product__price {
-  margin-top: 25px;
-  font-weight: 700;
-  color: #c48f55;
-  text-transform: uppercase;
-}
-
-.product__price_val:before,
-.product__price_query:before {
-  content: "—";
-  font-weight: 300;
-  margin-right: 7px;
-}
-
-.product__price_val:after {
-  content: "Руб.";
-  text-transform: uppercase;
-  font-weight: 300;
-  color: #000;
-  margin-left: 7px;
-}
-
-.product__price_query {
-  font-weight: 300;
+  width: calc( 100% - 30px );
+  height: inherit;
 }
