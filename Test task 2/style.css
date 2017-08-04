@@ -107,34 +107,24 @@ body {
 .product__item {
   margin-top: 12.08935240361512%;
   overflow: hidden;
-  background: rgba(0,0,0,.05);
 }
 
 .product__item_armchair {
   width: 50%;
-  height: 585px;
 }
 
 .product__item_armchair:nth-child(4n),
 .product__item_armchair:nth-child(4n+1) {
   width: 40%;
-  height: 585px;
 }
 
 .product__item:first-child,
 .product__item:last-child {
   width: 30%;
-  height: 485px;
 }
 
 .product__item_sofa {
   width: 60%;
-  height: 485px;
-}
-
-.product__link {
-  width: 100%;
-  height: inherit;
 }
 
 .product__available {
@@ -169,4 +159,21 @@ body {
   justify-content: flex-start;
   width: calc( 100% - 30px );
   height: inherit;
+}
+
+.product__pic {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0,0,0,.04);
+}
+
+.product__img {
+  height: auto;
+  display: block;
+  max-width: 75%;
+  margin: 12.5%;
+  z-index: -1;
 }
