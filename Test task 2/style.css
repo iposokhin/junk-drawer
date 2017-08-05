@@ -170,10 +170,21 @@ body {
   background-color: rgba(0,0,0,.04);
 }
 
+.product__item_armchair .product__pic:before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+
 .product__img {
   height: auto;
   display: block;
   max-width: 75%;
-  margin: 12.5%;
+  margin: auto;
   z-index: -1;
+}
+
+.product__item_sofa .product__img {
+  margin: 10%;
+  max-width: 80%;
 }
