@@ -35,18 +35,18 @@ html {
 
 body {
   width: 100%;
-  height: 100%; 
+  height: 100%;
+  display: flex;
 }
 
 .container {
   max-width: 1400px;
   width: 91.42857142857143%;
-  margin: 0 auto;
+  margin: 0 10%;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0 10%;
 }
 
 
@@ -68,6 +68,7 @@ body {
 .filter__item {
   cursor: pointer;
   margin-left: 2.34375vw;
+  text-transform: uppercase;
   white-space: nowrap;
   font-size: 1em;
 }
@@ -108,6 +109,10 @@ body {
 .product__item {
   margin-top: 12.08935240361512%;
   overflow: hidden;
+}
+
+.product__item:nth-child(even) {
+  margin-left: 2.34375vw;
 }
 
 .product__item_armchair {
@@ -187,7 +192,7 @@ body {
 
 .product__item_sofa .product__img {
   margin: 10%;
-  max-width: 80%;
+  max-width: 70%;
 }
 
 .product__code {
@@ -235,4 +240,23 @@ body {
 
 .product__price_query {
   font-weight: 300;
+}
+
+
+/* ----- Tablet ----- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .product__item {
+    width: 50%;
+  }
+  
+  .product__item_armchair:nth-child(4n),
+  .product__item_armchair:nth-child(4n+1) {
+    width: 40%;
+  }
+
+  .product__item_sofa .product__img {
+    margin: 15%;
+    max-width: 72.6%;
+  }
 }
