@@ -172,7 +172,7 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background-color: rgba(0,0,0,.04);
 }
 
@@ -255,8 +255,9 @@ body {
     width: 40%;
   }
 
-  .product__item_sofa .product__img {
-    margin: 15%;
-    max-width: 72.6%;
+  .product__item_sofa .product__pic:before {
+    content: '';
+    padding-top: 78.32%;
+    float: left;
   }
 }
