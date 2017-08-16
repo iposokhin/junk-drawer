@@ -284,7 +284,7 @@ body {
   background-color: rgba(0,0,0,.04);
 }
 
-.product__item_armchair .product__pic:before {
+.product__item .product__pic:before {
   content: '';
   padding-top: 100%;
   float: left;
