@@ -540,4 +540,8 @@ body {
   .product__item_sofa {
     width: 60%;
   }
+
+  .product__item_sofa .product__pic:before {
+    padding-top: 0;
+  }
 }
