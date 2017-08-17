@@ -31,3 +31,13 @@ Version 2 ( v2 ) was written in JavaScript using a library Snap.svg.
 Demo on my youtube channel:
 - [version 1](https://youtu.be/J5P-4pHzh6E).
 - [version 2](https://youtu.be/PLgkDVAbYQk).
+
+
+
+## Test task 2
+
+### Description
+A design was received when I'm looked for a job. I did spend very much time for do this work and didn't sent result back. A result isn't ideal. It isn't cross-browser. But all the same result. This work is my first expirience of applying a responsive design. And a first big markup project. I'm still looking for a job, so if you have a suggests write me.
+
+### Demo
+Demo on my youtube [channel](https://youtu.be/H0lRykz-x1M).
