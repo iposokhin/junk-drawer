@@ -5,97 +5,156 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Главная страница</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="vendors/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <object data="images/icons.svg" type="image/svg+xml" style="display: none;"></object>
+    <object data="images/control_arrow.svg" type="image/svg+xml" style="display: none;"></object>
   </head>
-  <body>
-    <header class="header">
-      <div class="header__top">
-        <div class="container">
-          <div class="header__welcome">
-            <div class="welcome">
-              Добро пожаловать в интернет-магазин корейской косметики              
-            </div>
+  <body class="page">
+    <header class="page__header header">
+      <div class="header__top-line top-line flex background-grey">
+        <div class="container flex">
+          <div class="header__welcome text-grey">
+            Добро пожаловать в интернет-магазин корейской косметики
           </div>
-          <div class="header__menu">
-            <ul class="menu">
-              <li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Статьи</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Доставка и оплата</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+          <nav class="header__main-nav main-nav flex">
+            <ul class="main-nav__list flex">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link text-grey">Блог</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link text-grey">Статьи</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link text-grey">Доставка и оплата</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link text-grey">Контакты</a>
+              </li>
             </ul>
-          </div>
-          <div class="header__auth">
-            <ul class="auth">
-              <li class="auth__item"><a href="#" class="auth__link">Войти</a></li>
-              <li class="auth__item"><a href="#" class="auth__link">Зарегестрироваться</a></li>
-            </ul>
-          </div>
+            <ul class="main-nav__list flex">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link text-grey">Вход</a>
+              </li>
+              <li class="main-nav__item main-nav__item_separated">
+                <a href="#" class="main-nav__link text-grey">Регистрация</a>
+              </li>
+            </ul>            
+          </nav>
         </div>
       </div>
-      <div class="header__middle">
-        <div class="container">
-          <div class="header__logo">
-            <div class="logo">
-              <a href="#" class="logo__link">
-                <img src="images/logo.png" alt="Логотип" class="logo__pic">
-              </a>
-            </div>
-          </div>
-          <div class="header__info">
-            <ul class="info">
-              <li class="info__item">
-                <span class="info__item-ico">
-                  <svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-                    <path id="balloon_x5F_icon" fill="#231F20" d="M15.878,0C9.879,0,5,4.902,5,10.926c0,2.422,1.419,6.104,4.466,11.587
-                      c2.08,3.743,4.148,6.904,4.235,7.037l1.495,2.277c0.152,0.23,0.407,0.369,0.682,0.369c0.273,0,0.529-0.139,0.68-0.369l1.496-2.277
-                      c0.086-0.132,2.141-3.266,4.235-7.037c3.046-5.483,4.466-9.166,4.466-11.587C26.755,4.902,21.876,0,15.878,0z M20.865,21.717
-                      c-2.065,3.72-4.088,6.804-4.172,6.934l-0.815,1.241l-0.815-1.241c-0.085-0.131-2.124-3.243-4.173-6.934
-                      C8.063,16.63,6.63,13,6.63,10.927c0-5.122,4.149-9.289,9.248-9.289c5.099,0,9.247,4.167,9.247,9.289
-                      C25.124,13,23.692,16.63,20.865,21.717z M15.878,4.8c-3.326,0-6.031,2.718-6.031,6.058c0,3.341,2.706,6.059,6.031,6.059
-                      c3.324,0,6.03-2.718,6.03-6.059C21.907,7.518,19.202,4.8,15.878,4.8z M15.878,15.279c-2.428,0-4.401-1.982-4.401-4.421
-                      c0-2.437,1.974-4.42,4.401-4.42c2.427,0,4.4,1.983,4.4,4.42C20.278,13.297,18.305,15.279,15.878,15.279z"/>
-                  </svg>                  
-                </span>
-                <span class="info__item-text">
+      <div class="header__mid-line mid-line flex">
+        <div class="container flex">
+          <a href="#" class="header__logo">
+            <img src="images/logo.png" alt="Логотип" class="logo__img">
+          </a>
+          <div class="header__info info">
+            <ul class="info__list">
+              <li class="info__item flex">
+                <svg class="info__ico ico ico_rotate_180 ico_color_lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/icons.svg#balloon-icon"></use>
+                </svg>
+                <div class="info__desc">
                   Ваш город: Новосибирск
-                </span></li>
-              <li class="info__item">
-                <span class="info__item-ico">
-                  <svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-                  <path id="phone_x5F_icon" fill="#231F20" d="M6.513,21.365c3.183,3.79,7.012,6.774,11.385,8.886
-                    c1.664,0.785,3.891,1.718,6.371,1.877c0.154,0.007,0.299,0.014,0.453,0.014c1.666,0,3.004-0.573,4.092-1.753
-                    c0.008-0.005,0.02-0.019,0.027-0.031c0.389-0.466,0.83-0.888,1.291-1.333c0.313-0.3,0.635-0.611,0.941-0.933
-                    c1.424-1.479,1.424-3.355-0.014-4.789l-4.018-4.002c-0.682-0.706-1.498-1.079-2.352-1.079c-0.857,0-1.68,0.373-2.381,1.072
-                    l-2.393,2.385c-0.223-0.126-0.447-0.24-0.662-0.347c-0.268-0.133-0.516-0.261-0.736-0.399c-2.179-1.38-4.159-3.177-6.05-5.488
-                    c-0.956-1.206-1.597-2.218-2.046-3.25c0.629-0.566,1.217-1.159,1.785-1.738c0.2-0.207,0.408-0.413,0.615-0.62
-                    c0.723-0.719,1.109-1.551,1.109-2.397s-0.381-1.679-1.109-2.397l-1.992-1.985c-0.234-0.233-0.455-0.459-0.682-0.693
-                    C9.708,1.911,9.248,1.445,8.792,1.024C8.105,0.354,7.294,0,6.44,0C5.59,0,4.775,0.354,4.059,1.033l-2.5,2.49
-                    C0.65,4.429,0.135,5.528,0.028,6.801c-0.126,1.591,0.168,3.284,0.93,5.327C2.126,15.292,3.892,18.229,6.513,21.365z M1.66,6.94
-                    c0.08-0.886,0.421-1.625,1.063-2.264l2.486-2.479c0.389-0.374,0.816-0.565,1.23-0.565c0.408,0,0.822,0.192,1.203,0.579
-                    C8.09,2.625,8.511,3.057,8.966,3.516c0.227,0.233,0.46,0.467,0.694,0.707l1.993,1.984c0.414,0.413,0.629,0.833,0.629,1.246
-                    c0,0.413-0.215,0.833-0.629,1.245c-0.208,0.207-0.415,0.42-0.623,0.626c-0.621,0.626-1.202,1.219-1.844,1.786
-                    c-0.015,0.014-0.021,0.019-0.035,0.033c-0.554,0.552-0.467,1.078-0.332,1.478c0.006,0.021,0.012,0.034,0.02,0.053
-                    c0.514,1.232,1.229,2.403,2.346,3.804c2.007,2.464,4.119,4.375,6.446,5.847c0.287,0.188,0.594,0.334,0.881,0.481
-                    c0.268,0.132,0.516,0.258,0.736,0.398c0.027,0.014,0.047,0.026,0.074,0.041c0.221,0.111,0.434,0.165,0.648,0.165
-                    c0.535,0,0.881-0.339,0.996-0.453l2.5-2.49c0.387-0.386,0.809-0.593,1.225-0.593c0.508,0,0.922,0.313,1.182,0.593l4.031,4.009
-                    c0.803,0.8,0.795,1.666-0.02,2.511c-0.281,0.301-0.574,0.586-0.889,0.886c-0.469,0.453-0.957,0.919-1.398,1.444
-                    c-0.768,0.827-1.684,1.214-2.867,1.214c-0.113,0-0.234-0.008-0.348-0.014c-2.193-0.141-4.232-0.992-5.762-1.718
-                    c-4.159-2.005-7.81-4.85-10.838-8.459c-2.493-2.991-4.17-5.774-5.281-8.757C1.814,9.751,1.552,8.279,1.66,6.94z"/>
-                  </svg>
-                </span>
-                <span class="info__item-text info__item-text_bold">
+                </div>
+              </li>
+              <li class="info__item flex">
+                <svg class="info__ico ico ico_rotate_-90 ico_color_lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/icons.svg#phone-icon"></use>
+                </svg>
+                <div class="info__desc desc desc_accent">
                   8 800 255-55-44
-                </span>
+                </div>
               </li>
             </ul>
           </div>
+          <form action="search.php" class="header__search-form flex">
+            <input type="text" class="search-form__input input" placeholder="Поиск товаров">
+            <input type="submit" class="search-form__submit submit" value="Поиск">
+          </form>
+          <div class="header__buy-counter flex">
+            <svg class="buy-counter__ico ico ico_rotate_180 ico_color_dark-lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xlink:href="images/icons.svg#packet-icon"></use>
+            </svg>
+            <div class="buy-counter__count count text-center text-dark-lilac">
+              0
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom-line bottom-line flex background-light-lilac">
+        <div class="container flex">
+          <nav class="header__categories-nav flex">
+            <ul class="categories-nav__list flex text-size-m">
+              <li class="categories-nav__item"><a href="#" class="categories-nav__link link link_hover text-dark-lilac">BB Cream</a></li>
+              <li class="categories-nav__item"><a href="#" class="categories-nav__link link link_hover text-dark-lilac">Очищение</a></li>
+              <li class="categories-nav__item"><a href="#" class="categories-nav__link link link_hover text-dark-lilac">Декоративная косметика</a></li>
+              <li class="categories-nav__item"><a href="#" class="categories-nav__link link link_hover text-dark-lilac">Основной уход</a></li>
+              <li class="categories-nav__item"><a href="#" class="categories-nav__link link link_hover text-dark-lilac">Маски</a></li>
+              <li class="categories-nav__item"><a href="#" class="categories-nav__link link link_hover text-dark-lilac">Для волос</a></li>
+              <li class="categories-nav__item"><a href="#" class="categories-nav__link link link_hover text-dark-lilac">Для тела</a></li>
+              <li class="categories-nav__item"><a href="#" class="categories-nav__link link link_hover text-dark-lilac">Аксессуары</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
+    <main class="page__content content">
+      <div class="content__carousel carousel background-grey">
+        <div class="container flex">
+          <div class="carousel__control control flex">
+            <svg class="control__ico ico ico_color_lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xlink:href="images/control_arrow.svg#arrow-icon"></use>
+            </svg>            
+          </div>
+          <div class="carousel__slide flex">
+            <img src="images/slide.jpg" alt="Слайд" class="slide__image">
+          </div>
+          <div class="carousel__control control flex">
+            <svg class="control__ico ico ico_rotate_180 ico_color_lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xlink:href="images/control_arrow.svg#arrow-icon"></use>
+            </svg>            
+          </div>
+        </div>
+      </div>
+      <div class="content__advantages advantages">
+        <div class="container flex">
+          <ul class="advantages__list flex">
+            <li class="advantages__item flex">
+              <svg class="advantages__ico ico ico_flip_horizontal ico-light-lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/icons.svg#car-icon"></use>
+              </svg>                
+              <div class="advantages__desk">
+                Бесплатная доставка в день заказа
+              </div>             
+            </li>
+            <li class="advantages__item flex">
+              <svg class="advantages__ico ico ico_flip_horizontal ico-light-lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/icons.svg#box-icon"></use>
+              </svg>                
+              <div class="advantages__desk">
+                Бесплатная доставка в день заказа
+              </div>             
+            </li>
+            <li class="advantages__item flex">
+              <svg class="advantages__ico ico ico_flip_horizontal ico-light-lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/icons.svg#shop-icon"></use>
+              </svg>                
+              <div class="advantages__desk">
+                Бесплатная доставка в день заказа
+              </div>             
+            </li>
+            <li class="advantages__item flex">
+              <svg class="advantages__ico ico ico_flip_horizontal ico-light-lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/icons.svg#like-icon"></use>
+              </svg>                
+              <div class="advantages__desk">
+                Бесплатная доставка в день заказа
+              </div>             
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
-  <script src="js/script.js"></script>
   </body>
 </html>
