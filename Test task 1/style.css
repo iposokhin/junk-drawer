@@ -54,12 +54,32 @@ html {
   text-align: center;
 }
 
+.text-white {
+  color: #fff;
+}
+
 .background-grey {
   background: #f5f5f5;
 }
 
 .background-light-lilac {
   background: #e2e1f5;
+}
+
+.background-lilac {
+  background: #747290;
+}
+
+.background-dark-lilac {
+  background: #413f65;
+}
+
+.background-white {
+  background: #fff;
+}
+
+.background-red {
+  background: #d82320;
 }
 
 .flex {
@@ -71,6 +91,10 @@ html {
   width: 68.85714285714286vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hidden {
+  display: none;
 }
 
 
@@ -242,6 +266,7 @@ html {
 .carousel__control {
   width: 50px;
   height: 50px;
+  border-radius: 25px;
 }
 
 .carousel__control:last-child {
@@ -249,9 +274,11 @@ html {
 }
 
 .control {
-  border-radius: 25px;
-  background: #fff;
   cursor: pointer;
+}
+
+.control_shadow {
+  box-shadow: 0 5px 17px 1px rgba(65,63,101,.08);
 }
 
 .control__ico {
@@ -274,6 +301,9 @@ html {
   height: auto;
   margin: 0 auto;
 }
+
+
+/* ------------------------------------ advantages ------------------------------------ */
 
 .content__advantages {
   padding: 40px 0;
@@ -306,4 +336,169 @@ html {
 
 .ico-light-lilac {
   fill: #e2e1f5;
+}
+
+
+/* ------------------------------------ novelty & discount ------------------------------------ */
+
+.content__novelty,
+.content__discount {
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.novelty__top, .discount__top {
+  flex-basis: 100%;
+}
+
+.title {
+  font-size: 1.75em;
+  font-weight: 700;
+}
+
+.novelty__panel,
+.discount__panel {
+  margin-left: auto;
+}
+
+.panel__control,
+.discount__control {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+}
+
+.panel__control_right,
+.discount__control_right {
+  margin-left: 0.7142857142857143vw;
+}
+
+.control__ico_size_sm {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.ico_color_white {
+  fill: #fff;
+}
+
+.novelty__list,
+.discount__list  {
+  align-items: flex-start;
+  height: 400px;
+  width: 100%;
+}
+
+.novelty__item,
+.discount__item {
+  width: 189px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.novelty__item:not(:first-child),
+.discount__item:not(:first-child) {
+  margin-left: auto;
+}
+
+.novelty__item:hover,
+.discount__item:hover {
+  box-shadow: 0 8px 25px 6px rgba(65,63,101,.2);
+}
+
+.novelty__item:hover > .novelty__action,
+.discount__item:hover > .discount__action{
+  display: flex;
+}
+
+.novelty__item:hover .novelty__desk,
+.discount__item:hover .discount__desk {
+  text-decoration: none;
+}
+
+.novelty__main,
+.discount__main {
+  flex-direction: column;
+  border: 1px solid #f5f5f5;
+}
+
+.novelty__image,
+.discount__image {
+  max-width: 176px;
+  max-height: 176px;
+}
+
+.novelty__desk,
+.discount__desk {
+  padding: 0 1.428571428571429vw;
+}
+
+.novelty__price,
+.discount__price {
+  padding: 10px 1.428571428571429vw;
+  align-items: baseline;
+  width: 100%;
+}
+
+.price__old-price, .price__new-price {
+  margin: 0 auto;
+}
+
+.old-price {
+  font-weight: 900;
+  font-size: 1.333333333333333em;
+  white-space: nowrap;
+  color: #bdbdca;
+  text-decoration: line-through;
+}
+
+.new-price {
+  font-weight: 900;
+  font-size: 1.75em;
+  white-space: nowrap;
+}
+
+.novelty__action,
+.discount__action {
+  width: 100%;
+  height: 43px;
+  justify-content: center;
+  display: none;
+  border: none;
+  cursor: pointer;
+}
+
+.action__desk {
+  margin-left: 0.7142857142857143vw;
+}
+
+
+/* ------------------------------------ banner ------------------------------------ */
+
+.banner {
+  background: #ecebf2;
+}
+
+.banner__item {
+  width: 32.5vw;
+  height: 21vw;
+  margin: 38px 0;
+  overflow: hidden;
+}
+
+.banner__item:nth-child(even) {
+  margin-left: auto;
+}
+
+.banner__item_num_1 {
+  background-image: url(images/ad_card1.jpg);
+  background-size: 100% auto;
+  background-position: 0 10px;
+  background-repeat: no-repeat;
+}
+
+.banner__item_num_2 {
+  background-image: url(images/ad_card2.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
