@@ -479,7 +479,7 @@ html {
   background: #ecebf2;
 }
 
-.banner__item {
+.banner__pic{
   width: 32.5vw;
   height: 21vw;
   margin: 38px 0;
@@ -490,15 +490,103 @@ html {
   margin-left: auto;
 }
 
-.banner__item_num_1 {
+.pic_num_1 {
   background-image: url(images/ad_card1.jpg);
   background-size: 100% auto;
   background-position: 0 10px;
   background-repeat: no-repeat;
 }
 
-.banner__item_num_2 {
+.pic_num_2 {
   background-image: url(images/ad_card2.jpg);
-  background-size: 100% auto;
+}
+
+
+
+/* ------------------------------------ news ------------------------------------ */
+
+.content__news {
+  margin-top: 20px;
+}
+
+.news__item {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 21.07142857142857vw;
+}
+
+.news__item:not(:first-child) {
+  margin-left: auto;
+}
+
+.news__pic {
+  width: 21.07142857142857vw;
+  height: 8.142857142857143vw;
+}
+
+.pic {
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;  
+}
+
+.pic_num_3 {
+  background-image: url(images/news1.jpg);  
+}
+
+.pic_num_4 {
+  background-image: url(images/news2.jpg); 
+}
+
+.pic_num_5 {
+  background-image: url(images/news3.jpg); 
+} 
+
+.news__date {
+  margin-top: 25px;
+}
+
+.date {
+  color: #c6c6c6;
+}
+
+.news__link, .news__note {
+  margin-top: 10px;
+}
+
+.note {
+  color: #929197;
+}
+
+
+/* ------------------------------------ motivation ------------------------------------ */
+
+.content__motivation {
+  margin-top: 45px;
+}
+
+.motivation__subject {
+  align-items: flex-start;
+}
+
+.motivation__pic {
+  width: 22.42857142857143vw;
+  height: 20.21428571428571vw;
+  margin-right: 1.428571428571429vw;
+}
+
+.pic_num_6 {
+  background-image: url(images/cosmetic.jpg);
+}
+
+.motivation__desc {
+  width: 45vw;
+}
+
+.motivation__paragraph:not(:first-child) {
+  margin-top: 20px;
+}
+
+.paragraph {
+  color: #333;
 }
