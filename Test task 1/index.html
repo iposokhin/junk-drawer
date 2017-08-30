@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <object data="images/icons.svg" type="image/svg+xml" style="display: none;"></object>
     <object data="images/control_arrow.svg" type="image/svg+xml" style="display: none;"></object>
+    <object data="images/social-icons.svg" type="image/svg+xml" style="display: none;"></object>
   </head>
   <body class="page">
     <header class="page__header header">
@@ -17,27 +18,27 @@
           <div class="header__welcome text-grey">
             Добро пожаловать в интернет-магазин корейской косметики
           </div>
-          <nav class="header__main-nav main-nav flex">
-            <ul class="main-nav__list flex">
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link text-grey">Блог</a>
+          <nav class="header__info-nav info-nav flex">
+            <ul class="info-nav__list flex">
+              <li class="info-nav__item">
+                <a href="#" class="info-nav__link text-grey">Блог</a>
               </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link text-grey">Статьи</a>
+              <li class="info-nav__item">
+                <a href="#" class="info-nav__link text-grey">Статьи</a>
               </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link text-grey">Доставка и оплата</a>
+              <li class="info-nav__item">
+                <a href="#" class="info-nav__link text-grey">Доставка и оплата</a>
               </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link text-grey">Контакты</a>
+              <li class="info-nav__item">
+                <a href="#" class="info-nav__link text-grey">Контакты</a>
               </li>
             </ul>
-            <ul class="main-nav__list flex">
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link text-grey">Вход</a>
+            <ul class="info-nav__list flex">
+              <li class="info-nav__item">
+                <a href="#" class="info-nav__link text-grey">Вход</a>
               </li>
-              <li class="main-nav__item main-nav__item_separated">
-                <a href="#" class="main-nav__link text-grey">Регистрация</a>
+              <li class="info-nav__item info-nav__item_separated">
+                <a href="#" class="info-nav__link text-grey">Регистрация</a>
               </li>
             </ul>            
           </nav>
@@ -48,21 +49,21 @@
           <a href="#" class="header__logo">
             <img src="images/logo.png" alt="Логотип" class="logo__img">
           </a>
-          <div class="header__info info">
-            <ul class="info__list">
-              <li class="info__item flex">
-                <svg class="info__ico ico ico_rotate_180 ico_color_lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <div class="header__contact-info contact-info">
+            <ul class="contact-info__list">
+              <li class="contact-info__item flex">
+                <svg class="contact-info__ico ico ico_rotate_180 ico_color_lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <use xlink:href="images/icons.svg#balloon-icon"></use>
                 </svg>
-                <div class="info__desc">
+                <div class="contact-info__desc">
                   Ваш город: Новосибирск
                 </div>
               </li>
-              <li class="info__item flex">
-                <svg class="info__ico ico ico_rotate_-90 ico_color_lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <li class="contact-info__item flex">
+                <svg class="contact-info__ico ico ico_rotate_-90 ico_color_lilac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <use xlink:href="images/icons.svg#phone-icon"></use>
                 </svg>
-                <div class="info__desc desc desc_accent">
+                <div class="contact-info__desc desc desc_accent">
                   8 800 255-55-44
                 </div>
               </li>
@@ -474,5 +475,113 @@
         </div>
       </section>
     </main>
+    <footer class="page__footer footer background-lilac">
+      <div class="container flex">
+        <nav class="footer__info-nav info-nav flex">
+          <h2 class="info-nav__list-name list-name">Информация</h2>
+          <ul class="info-nav__list">
+            <li class="info-nav__item"><a href="#" class="info-nav__link text-white">О магазине</a></li>
+            <li class="info-nav__item"><a href="#" class="info-nav__link text-white">Доставка и оплата</a></li>
+            <li class="info-nav__item"><a href="#" class="info-nav__link text-white">Новости</a></li>
+            <li class="info-nav__item"><a href="#" class="info-nav__link text-white">Статьи</a></li>
+            <li class="info-nav__item"><a href="#" class="info-nav__link text-white">Блог</a></li>
+            <li class="info-nav__item"><a href="#" class="info-nav__link text-white">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__categories-nav categories-nav flex">
+          <h2 class="categories-nav__list-name list-name">Каталог</h2>
+          <ul class="categories-nav__list">
+            <li class="categories-nav__item"><a href="#" class="categories-nav__link categories-nav__link_no-padding text-white">BB Cream</a></li>
+            <li class="categories-nav__item"><a href="#" class="categories-nav__link categories-nav__link_no-padding text-white">Очищение</a></li>
+            <li class="categories-nav__item"><a href="#" class="categories-nav__link categories-nav__link_no-padding text-white">Декоративная косметика</a></li>
+            <li class="categories-nav__item"><a href="#" class="categories-nav__link categories-nav__link_no-padding text-white">Основной уход</a></li>
+            <li class="categories-nav__item"><a href="#" class="categories-nav__link categories-nav__link_no-padding text-white">Маски</a></li>
+            <li class="categories-nav__item"><a href="#" class="categories-nav__link categories-nav__link_no-padding text-white">Для волос</a></li>
+            <li class="categories-nav__item"><a href="#" class="categories-nav__link categories-nav__link_no-padding text-white">Для тела</a></li>
+            <li class="categories-nav__item"><a href="#" class="categories-nav__link categories-nav__link_no-padding text-white">Аксессуары</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact-info contact-info flex">
+          <div class="contact-info__group">
+            <ul class="contact-info__list">
+              <li class="contact-info__item flex">
+                <svg class="contact-info__ico ico ico_rotate_-90 ico_color_white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/icons.svg#phone-icon"></use>
+                </svg>
+                <div class="contact-info__desc desc desc_accent text-white">
+                  8 800 255-55-44
+                </div>
+              </li>
+              <li class="contact-info__item flex">
+                <svg class="contact-info__ico ico ico_flip_horizontal ico_color_white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/icons.svg#airplane-icon"></use>
+                </svg>
+                <div class="contact-info__desc desc">
+                  <a href="#" class="text-white">info@flovera.ru</a>
+                </div>
+              </li>
+            </ul>          
+          </div>
+          <div class="contact-info__group">
+            <div class="contact-info__desc contact-info__desc_no-margin text-white">Мы в социальных сетях:</div>
+            <ul class="contact-info__list contact-info__list_type_social flex">
+              <li class="contact-info__item contact-info__item_type_social">
+                <a href="#" class="contact-info__link link_type_social link_sn_vk flex">
+                  <svg class="contact-info__ico ico ico_rotate_180 ico_flip_horizontal ico_color_white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="images/social-icons.svg#vk-icon"></use>
+                  </svg>                  
+                </a>
+              </li>
+              <li class="contact-info__item contact-info__item_type_social">
+                <a href="#" class="contact-info__link link_type_social link_sn_fb flex">
+                  <svg class="contact-info__ico ico ico_rotate_180 ico_flip_horizontal ico_color_white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="images/social-icons.svg#fb-icon"></use>
+                  </svg>                  
+                </a>
+              </li>
+              <li class="contact-info__item contact-info__item_type_social">
+                <a href="#" class="contact-info__link link_type_social link_sn_ok flex">
+                  <svg class="contact-info__ico ico ico_rotate_180 ico_flip_horizontal ico_color_white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="images/social-icons.svg#ok-icon"></use>
+                  </svg>                  
+                </a>
+              </li>
+              <li class="contact-info__item contact-info__item_type_social">
+                <a href="#" class="contact-info__link link_type_social link_sn_twitter flex">
+                  <svg class="contact-info__ico ico ico_rotate_180 ico_flip_horizontal ico_color_white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="images/social-icons.svg#twitter-icon"></use>
+                  </svg>                  
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-info__group">
+            <ul class="contact-info__list list_type_payment background-white flex">
+              <li class="contact-info__item">
+                <a href="#" class="contact-info__link contact-info__link flex">
+                  <img src="images/visa.png" alt="visa" class="contact-info__pic">
+                </a>
+              </li>
+              <li class="contact-info__item">
+                <a href="#" class="contact-info__link contact-info__link flex">
+                  <img src="images/mastercard.png" alt="mastercard" class="contact-info__pic">
+                </a>
+              </li>
+              <li class="contact-info__item">
+                <a href="#" class="contact-info__link contact-info__link flex">
+                  <img src="images/yandex.png" alt="yandex money" class="contact-info__pic">
+                </a>
+              </li>
+              <li class="contact-info__item">
+                <a href="#" class="contact-info__link contact-info__link flex">
+                  <img src="images/qiwi.png" alt="qiwi" class="contact-info__pic">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>       
+      </div>
+    </footer>
   </body>
 </html>
