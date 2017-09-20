@@ -13,28 +13,36 @@ function visibilityFilter ( state = SHOW_ALL, action ) {
   }
 }
 
+function todo ( state, action ) {
+  switch ( action.type ) {
+    case 'ADD_TODO' :
+      return {
+        text: action.text,
+        id: action.id,
+        completed: false
+      }
+    case 'TOGGLE_TODO' :
+      if ( state.id === action.id ) {
+        return Object.assign( {}, state, {
+          completed: !state.completed
+        } );
+      }
+      return state;
+    default :
+      return state;
+  }
+}
+
 function todos ( state = [], action ) {
   switch ( action.type ) {
     case ADD_TODO : 
       return [
         ...state,
-        {
-          text: action.text,
-          id: action.id,
-          completed: false
-        }
+        todo( undefined, action )
       ]
 
     case TOGGLE_TODO :
-      return state.map( ( todo, index ) => {
-        if ( index === action.id ) {
-          return Object.assign( {}, todo, {
-            completed: !todo.completed
-          } );
-        }
-
-        return todo;
-      } )
+      return state.map( t => todo( t, action ) );
 
     default : 
       return state;
