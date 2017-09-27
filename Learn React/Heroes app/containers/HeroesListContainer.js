@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { HeroesList } from '../components/HeroesList.js';
 
-const mapStateToProps = ( state ) => {
+const mapStateToProps = ( { heroes } ) => {
   return {
-    heroes: state.heroes
+    heroes: heroes
   }
 }
 

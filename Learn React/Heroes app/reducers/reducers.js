@@ -1,3 +1,4 @@
+import { combineReducers } from 'redux';
 import { ADD_HERO, EDIT_HERO, REMOVE_HERO } from './../actions/actions';
 
 const hero = ( state = {}, action ) => {
@@ -21,17 +22,18 @@ const hero = ( state = {}, action ) => {
   }
 }
 
-export const heroes = ( state = {}, action ) => {
+const heroes = ( state = {}, action ) => {
   switch ( action.type ) {
     case ADD_HERO :
     case EDIT_HERO : 
     case REMOVE_HERO :
-      return {
-        ...state,
-        heroes: hero( state.heroes, action )     
-      }
+      return Object.assign( {}, state, hero( heroes, action ) );
 
     default : 
       return state;
   }
 }
+
+export const heroesApp = combineReducers( {
+  heroes
+} )

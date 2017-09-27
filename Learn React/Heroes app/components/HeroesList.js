@@ -4,24 +4,36 @@ import { PropTypes } from 'prop-types';
 import { HeroItem } from './HeroItem';
 
 export const HeroesList = ( { heroes } ) => {
-  return (
-    <ul>
-      {
-        (() => {
-          let items = [];
-          for( let key in heroes ) {
-            items.push(
+  let el;
+
+  if( !Object.values( heroes ).length ) {
+    el = (
+      <div>
+        <h2> My heroes </h2>
+        <div>
+          Heroes not found. Add your hero to get started!
+        </div>
+      </div>
+    )
+  } else {
+    el = (
+      <div>
+        <h2> My heroes </h2>     
+        <ul>
+          {
+            Object.values( heroes ).map( ( hero ) => 
               <HeroItem
-                key={ key.toString() }
-                { ...heroes[ key ] }
-              /> 
-            );
+                key={ hero.id }
+                { ...hero }
+              />
+            )
           }
-          return items;
-        })()
-      }
-    </ul>
-  )
+        </ul>
+      </div>
+    )
+  }
+
+  return el;
 }
 
 HeroesList.propTypes = {
