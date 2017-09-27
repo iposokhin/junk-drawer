@@ -2,7 +2,7 @@ import { ADD_HERO, EDIT_HERO, REMOVE_HERO } from './actions';
 
 let freeId = 0;
 
-export function addHero ( name ) {
+export const addHero = ( name ) => {
   return {
     type: ADD_HERO,
     id: freeId++,
@@ -10,7 +10,7 @@ export function addHero ( name ) {
   }
 }
 
-export function editHero ( id, name ) {
+export const editHero = ( id, name ) => {
   return {
     type: EDIT_HERO,
     id: id,
@@ -18,7 +18,7 @@ export function editHero ( id, name ) {
   }
 }
 
-export function removeHero ( id ) {
+export const removeHero = ( id ) => {
   return {
     type: REMOVE_HERO,
     id: id

@@ -1,6 +1,6 @@
 import { ADD_HERO, EDIT_HERO, REMOVE_HERO } from './../actions/actions';
 
-function hero ( state = {}, action ) {
+const hero = ( state = {}, action ) => {
   switch ( action.type ) {
     case ADD_HERO :
     case EDIT_HERO :
@@ -16,10 +16,12 @@ function hero ( state = {}, action ) {
       let newState = Object.assign( {}, state );
       delete newState[ action.id ];
       return newState
+    default :
+      return state;
   }
 }
 
-export function heroes ( state = {}, action ) {
+export const heroes = ( state = {}, action ) => {
   switch ( action.type ) {
     case ADD_HERO :
     case EDIT_HERO : 
