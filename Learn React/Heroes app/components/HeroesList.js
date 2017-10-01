@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 
 import { HeroItem } from './HeroItem';
 
-export const HeroesList = ( { heroes } ) => {
+export const HeroesList = ( { heroes, onHeroClick } ) => {
   let el;
 
   if( !Object.values( heroes ).length ) {
@@ -25,6 +25,7 @@ export const HeroesList = ( { heroes } ) => {
               <HeroItem
                 key={ hero.id }
                 { ...hero }
+                onClick={ () => onHeroClick( hero.id ) }
               />
             )
           }
@@ -40,5 +41,5 @@ HeroesList.propTypes = {
   heroes: PropTypes.objectOf( PropTypes.shape( {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired
-  } ).isRequired ).isRequired
+  } ).isRequired ).isRequired,
 }

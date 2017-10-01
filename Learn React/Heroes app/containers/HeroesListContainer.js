@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { HeroesList } from '../components/HeroesList.js';
+import { HeroesList } from '../components/HeroesList';
+import { selectHero } from '../actions/action-creators';
 
 const mapStateToProps = ( { heroes } ) => {
   return {
@@ -7,8 +8,17 @@ const mapStateToProps = ( { heroes } ) => {
   }
 }
 
+const mapDispatchToProps = ( dispatch ) => {
+  return {
+    onHeroClick: ( id ) => {
+      dispatch( selectHero( id ) );
+    }
+  }
+}
+
 const HeroesListContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )( HeroesList );
 
 export default HeroesListContainer;

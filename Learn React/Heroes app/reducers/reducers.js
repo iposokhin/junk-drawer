@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { ADD_HERO, EDIT_HERO, REMOVE_HERO } from './../actions/actions';
+import { ADD_HERO, EDIT_HERO, REMOVE_HERO, SELECT_HERO } from './../actions/actions';
 
 const hero = ( state = {}, action ) => {
   switch ( action.type ) {
@@ -34,6 +34,17 @@ const heroes = ( state = {}, action ) => {
   }
 }
 
+const selectedHero = ( state = null, action ) => {
+  switch ( action.type ) {
+    case SELECT_HERO : 
+      return action.id;
+
+    default :
+      return state;
+  }
+}
+
 export const heroesApp = combineReducers( {
-  heroes
-} )
+  heroes,
+  selectedHero
+} );

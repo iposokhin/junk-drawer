@@ -1,4 +1,4 @@
-import { ADD_HERO, EDIT_HERO, REMOVE_HERO } from './actions';
+import { ADD_HERO, EDIT_HERO, REMOVE_HERO, SELECT_HERO } from './actions';
 
 let freeId = 0;
 
@@ -21,6 +21,13 @@ export const editHero = ( id, name ) => {
 export const removeHero = ( id ) => {
   return {
     type: REMOVE_HERO,
+    id: id
+  }
+}
+
+export const selectHero = ( id ) => {
+  return {
+    type: SELECT_HERO,
     id: id
   }
 }

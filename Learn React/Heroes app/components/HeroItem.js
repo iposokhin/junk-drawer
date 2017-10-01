@@ -1,9 +1,11 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-export const HeroItem = ( { id, name } ) => {
+export const HeroItem = ( { id, name, onClick } ) => {
   return (
-    <li>
+    <li
+      onClick={ onClick }
+    >
       <span>{ id }</span>
       <span>{ name }</span>
     </li>

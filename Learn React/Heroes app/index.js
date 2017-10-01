@@ -11,6 +11,10 @@ import { addHero, editHero, removeHero } from './actions/action-creators';
 
 let store = createStore( heroesApp );
 
+let unsunscribe = store.subscribe( () => {
+  console.log( store.getState() );
+} );
+
 render (
     <Provider store={ store }>
       <App />
