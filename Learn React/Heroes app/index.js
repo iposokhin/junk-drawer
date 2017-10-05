@@ -7,11 +7,9 @@ import App from './components/App';
 import { createStore } from 'redux';
 import { heroesApp } from './reducers/reducers';
 
-import { addHero, editHero, removeHero } from './actions/action-creators';
-
 let store = createStore( heroesApp );
 
-let unsunscribe = store.subscribe( () => {
+store.subscribe( () => {
   console.log( store.getState() );
 } );
 
@@ -21,4 +19,3 @@ render (
     </Provider>,
     document.getElementById( 'root' )
 );
-

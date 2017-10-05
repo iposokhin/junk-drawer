@@ -26,8 +26,9 @@ const heroes = ( state = {}, action ) => {
   switch ( action.type ) {
     case ADD_HERO :
     case EDIT_HERO : 
+      return Object.assign( {}, hero( state, action ) );
     case REMOVE_HERO :
-      return Object.assign( {}, state, hero( heroes, action ) );
+      return Object.assign( {}, hero( state, action ) );
 
     default : 
       return state;

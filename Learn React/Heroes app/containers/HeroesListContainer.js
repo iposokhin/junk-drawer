@@ -1,17 +1,24 @@
 import { connect } from 'react-redux';
 import { HeroesList } from '../components/HeroesList';
-import { selectHero } from '../actions/action-creators';
+import { selectHero, removeHero } from '../actions/action-creators';
 
-const mapStateToProps = ( { heroes } ) => {
+const mapStateToProps = ( { heroes, selectedHero } ) => {
   return {
-    heroes: heroes
+    heroes: heroes,
+    selectedHero: selectedHero
   }
 }
 
-const mapDispatchToProps = ( dispatch ) => {
+const mapDispatchToProps = ( dispatch, ownProperty ) => {
   return {
     onHeroClick: ( id ) => {
       dispatch( selectHero( id ) );
+    },
+    onRemoveClick: ( id, selected ) => {
+      if ( selected ) {
+        dispatch( selectHero( null ) );
+      }
+      dispatch( removeHero( id ) );
     }
   }
 }
