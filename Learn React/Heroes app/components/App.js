@@ -1,14 +1,13 @@
 import React from 'react';
-import HeroesListContainer from '../containers/HeroesListContainer';
-import AddHero from '../containers/AddHero';
-import MyHeroContainer from '../containers/MyHeroContainer';
 
-const App = () => {
+import NavBar from './NavBar';
+
+const App = ( { children }) => {
   return (
     <div>
-      <AddHero />
-      <HeroesListContainer />
-      <MyHeroContainer />
+      <h1> Tour of Heroes </h1>
+      <NavBar />
+      { children }
     </div>
   )
 }
