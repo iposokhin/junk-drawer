@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
 import App from './components/App';
 import Heroes from './components/Heroes';
+import EditHeroContainer from './containers/EditHeroContainer';
 
 import { createStore } from 'redux';
 import { heroesApp } from './reducers/reducers';
@@ -23,6 +24,7 @@ render (
             <Redirect to="/heroes" />
           ) } />
           <Route exact path="/heroes" component={ Heroes } />
+          <Route exact path="/details/hero/:id" component={ EditHeroContainer } />
         </App>        
       </BrowserRouter>
     </Provider>,

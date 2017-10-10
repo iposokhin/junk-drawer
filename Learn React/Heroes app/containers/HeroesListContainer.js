@@ -9,7 +9,7 @@ const mapStateToProps = ( { heroes, selectedHero } ) => {
   }
 }
 
-const mapDispatchToProps = ( dispatch, ownProperty ) => {
+const mapDispatchToProps = ( dispatch ) => {
   return {
     onHeroClick: ( id ) => {
       dispatch( selectHero( id ) );
