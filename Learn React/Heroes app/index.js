@@ -19,9 +19,9 @@ render (
     <Provider store={ store }>
       <BrowserRouter>
         <App>
-          <Route exact path="/">
+          <Route exact path="/" render={ () => (
             <Redirect to="/heroes" />
-          </Route>
+          ) } />
           <Route exact path="/heroes" component={ Heroes } />
         </App>        
       </BrowserRouter>
