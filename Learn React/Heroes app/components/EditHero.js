@@ -1,12 +1,9 @@
 import React from 'react';
 
-export const EditHero = ( { hero, onChangeHeroName } ) => {
+export const EditHero = ( { hero, onChangeHeroName, goBack } ) => {
   const onChange = ( e ) => {
-    let value = e.target.value.trim();
-
-    if ( value ) {
-      onChangeHeroName( hero.id, value );
-    }
+    let value = e.target.value;
+    onChangeHeroName( hero.id, value );
   }
 
   return (
@@ -18,7 +15,9 @@ export const EditHero = ( { hero, onChangeHeroName } ) => {
         <label htmlFor="heroName">name:</label>
         <input id="heroName" type="text" value={ hero.name } onChange={ onChange } /> 
       </form>
-
+      <button onClick={ goBack }>
+        Back
+      </button>
     </div>
   )
 };

@@ -2,9 +2,10 @@ import { connect } from 'react-redux';
 import { EditHero } from '../components/EditHero';
 import { editHero } from '../actions/action-creators';
 
-const mapStateToProps = ( { heroes, selectedHero } ) => {
+const mapStateToProps = ( { heroes, selectedHero }, ownProps ) => {
   return {
-    hero: heroes[ selectedHero ]
+    hero: heroes[ selectedHero ],
+    goBack: ownProps.history.goBack
   }
 }
 
