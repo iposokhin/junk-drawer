@@ -15,44 +15,53 @@ let quiz = [
     'question': 'Какая степень двойки даст 1024?',
     'answers': ['4', '8', '10' ],
     'rightAnswer': 2
+  },
+  {
+    'question': 'На какой планете ты живешь?',
+    'answers': ['Марс', 'Юпитер', 'Сатурн', 'Нибиру', 'Венера', 'Земля' ],
+    'rightAnswer': 5
   }
 ];
+
 
 let questionBlock = document.querySelector( '#question' ),
     answersBlock = document.querySelector( '#answers' ),
     resultBlock = document.querySelector( '#result' );
     
-    
-function setQuestion( data ) {
+
+function setQuestion( { question, answers } ) {
   return new Promise( ( resolve, reject) => {
-    questionBlock.innerHTML = data.question;
+    questionBlock.innerHTML = question;
       
-    data.answers.forEach( ( answer, index ) => {
+    answers.forEach( ( answer, index ) => {
       let button = document.createElement( 'button' );
-      button.innerHTML = answer;
-      button.value = index;
-      button.onclick = ( e ) => {      
-        questionBlock.innerHTML = '';
-        answersBlock.innerHTML = '';
-        
-        resolve( e.target.value );
-      }
+          button.innerHTML = answer;
+          button.value = index;
+          
+          button.onclick = ( e ) => {      
+            questionBlock.innerHTML = '';
+            answersBlock.innerHTML = '';        
+            resolve( e.target.value );
+          }
       
       answersBlock.appendChild( button );
     } );
   } );
 }
 
-async function startQuiz() {
-  for( let i = 0; i < quiz.length; i++ ) {
-    await setQuestion( quiz[i] ).then( ( userAnswer ) => {
-      if ( userAnswer == quiz[i].rightAnswer ) {
-        counter++;
-      }
-    } );
+async function startQuiz( allQuestions ) {
+  for( let i = 0; i < allQuestions.length; i++ ) {
+    let currentQuestion = allQuestions[i];
+    
+    await setQuestion( currentQuestion )
+      .then( ( userAnswer ) => {
+        if ( userAnswer == currentQuestion.rightAnswer ) {
+          counter++;
+        }
+      } );
   }
   return counter;
 }
 
-startQuiz()
+startQuiz( quiz )
   .then( ( result ) => resultBlock.innerHTML = `Количество правильных ответов - ${result}! Мои поздравления!!!` );
