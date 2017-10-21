@@ -1,5 +1,3 @@
-let counter = 0;
-
 let quiz = [
   {
     'question': '2+2?',
@@ -50,6 +48,8 @@ function setQuestion( { question, answers } ) {
 }
 
 async function startQuiz( allQuestions ) {
+  let counter = 0;
+  
   for( let i = 0; i < allQuestions.length; i++ ) {
     let currentQuestion = allQuestions[i];
     
@@ -60,6 +60,7 @@ async function startQuiz( allQuestions ) {
         }
       } );
   }
+  
   return counter;
 }
 

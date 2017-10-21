@@ -1,5 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import FontAwesom from 'react-fontawesome';
 
 export const HeroItem = ( { id, name, onHeroClick, onRemoveClick } ) => {
   return (
@@ -9,7 +10,7 @@ export const HeroItem = ( { id, name, onHeroClick, onRemoveClick } ) => {
         <span>{ name }</span>
       </span>
       <button onClick={ onRemoveClick }>
-        Remove
+        <FontAwesom name="times" />
       </button>
     </li>
   );

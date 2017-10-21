@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 
 export const EditHero = ( { hero, onChangeHeroName, goBack } ) => {
   const onChange = ( e ) => {
@@ -16,7 +17,8 @@ export const EditHero = ( { hero, onChangeHeroName, goBack } ) => {
         <input id="heroName" type="text" value={ hero.name } onChange={ onChange } /> 
       </form>
       <button onClick={ goBack }>
-        Back
+        <FontAwesome name="reply" />
+        <span> Back</span>
       </button>
     </div>
   )

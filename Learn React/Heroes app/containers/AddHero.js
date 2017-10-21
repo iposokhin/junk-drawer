@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addHero } from '../actions/action-creators';
+import FontAwesome from 'react-fontawesome';
 
 let AddHero = ( { dispatch } ) => {
   let input;
@@ -29,7 +30,8 @@ let AddHero = ( { dispatch } ) => {
         <button
           type='submit'
         >
-          Add hero
+          <span>Add </span>
+          <FontAwesome name="user-plus" />
         </button>
       </form>
     </div>
