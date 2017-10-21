@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb( 250, 250, 250 );
+  margin: 0;
+  font-size: 16px;
+}
+
+.root {
+  width: 25%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.header {
+  color: rgb( 40, 40, 50 );
+}
+
+.header, .list {
+  margin: 0;
+}
+
+.header_h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.section:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.header, .section, .nav-bar {
+  width: 300px;
+  hyphens: auto;
+  word-break: break-all;
+}
+
+.nav-bar__link:not(:first-child) {
+  margin-left: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: #00a1e4;
+  border-bottom: 1px solid #00a1e4;
+}
+
+.link_active {
+  border-bottom: none;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__input {
+  flex-grow: 2;
+  height: 30px;
+}
+
+.input {
+  font-size: 1.1em;
+  border: 2px solid #00a1e4;
+  border-right: none;
+  outline: none;  
+}
+
+.button {
+  background-color: #00a1e4;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: none;
+}
+
+.button_no-background {
+  background-color: transparent;
+  color: rgb( 40, 40, 50 );
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list__hero {
+  display: flex;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.hero {
+  border-bottom: 1px solid #00a1e4;
+}
+
+.hero__id {
+  padding: 10px;
+}
+
+.hero__remove {
+  margin-left: auto;
+}
+
+.info {
+  cursor: pointer;
+}

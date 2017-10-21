@@ -7,9 +7,10 @@ let AddHero = ( { dispatch } ) => {
   let input;
 
   return (
-    <div>
-      <h2> Add hero </h2>
+    <section className="section">
+      <h2 className="header header_h2"> Add hero </h2>
       <form
+        className="form"
         onSubmit={
           ( e ) => {
             e.preventDefault();
@@ -22,6 +23,7 @@ let AddHero = ( { dispatch } ) => {
         }
       >
         <input
+          className="form__input input"
           type='text'
           ref={ ( node ) => {
             input = node;
@@ -29,12 +31,13 @@ let AddHero = ( { dispatch } ) => {
         />
         <button
           type='submit'
+          className="form__button button"
         >
           <span>Add </span>
           <FontAwesome name="user-plus" />
         </button>
       </form>
-    </div>
+    </section>
   );
 }
 

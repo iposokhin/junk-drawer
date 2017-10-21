@@ -6,17 +6,17 @@ import { HeroItem } from './HeroItem';
 export const HeroesList = ( { heroes, selectedHero, onHeroClick, onRemoveClick } ) => {
 
   return ( !Object.values( heroes ).length ) ? (
-    <div>
-      <h2> My heroes </h2>
+    <section className="section">
+      <h2 className="header header_h2"> My heroes </h2>
       <div>
         Heroes not found. Add your hero to get started!
       </div>
-    </div>
+    </section>
   ) :
   (
-    <div>
-      <h2> My heroes </h2>     
-      <ul>
+    <section className="section">
+      <h2 className="header header_h2"> My heroes </h2>     
+      <ul className="list">
         {
           Object.values( heroes ).map( ( hero ) =>
             <HeroItem
@@ -28,7 +28,7 @@ export const HeroesList = ( { heroes, selectedHero, onHeroClick, onRemoveClick }
           )
         }
       </ul>
-    </div>
+    </section>
   )
 }
 

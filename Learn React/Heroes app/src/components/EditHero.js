@@ -8,8 +8,8 @@ export const EditHero = ( { hero, onChangeHeroName, goBack } ) => {
   }
 
   return (
-    <div>
-      <h2>{ hero.name } details!</h2>
+    <section className="section">
+      <h2 className="header header_h2">{ hero.name } details!</h2>
       <form>
         <label htmlFor="heroId">id:</label>
         <input id="heroId" type="text" value={ hero.id } readOnly />
@@ -20,6 +20,6 @@ export const EditHero = ( { hero, onChangeHeroName, goBack } ) => {
         <FontAwesome name="reply" />
         <span> Back</span>
       </button>
-    </div>
+    </section>
   )
 };

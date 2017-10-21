@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 export const MyHero = ( { hero } ) => {
   const el = ( hero !== null ) ?
-              <div>
+              <section className="section">
                 <div>{ `${ hero.name.toUpperCase() } is my hero!` }</div>
                 <div>
-                  <Link to={ `/details/hero/${ hero.id }` }>
+                  <Link className="link" to={ `/details/hero/${ hero.name.toLowerCase() }` }>
                     View Details
                   </Link>
                 </div>
-              </div>:
+              </section>:
               null;
   return el;
 }

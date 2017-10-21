@@ -24,7 +24,7 @@ render (
             <Redirect to="/heroes" />
           ) } />
           <Route exact path="/heroes" component={ Heroes } />
-          <Route exact path="/details/hero/:id" component={ EditHeroContainer } />
+          <Route exact path="/details/hero/:name" component={ EditHeroContainer } />
         </App>        
       </BrowserRouter>
     </Provider>,

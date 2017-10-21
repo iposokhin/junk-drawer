@@ -4,12 +4,12 @@ import FontAwesom from 'react-fontawesome';
 
 export const HeroItem = ( { id, name, onHeroClick, onRemoveClick } ) => {
   return (
-    <li>
-      <span onClick={ onHeroClick }>
-        <span>{ id }</span>
-        <span>{ name }</span>
+    <li className="list__hero hero">
+      <span className="hero__info info" onClick={ onHeroClick }>
+        <span className="hero__id">{ id }</span>
+        <span className="hero__name">{ name }</span>
       </span>
-      <button onClick={ onRemoveClick }>
+      <button className="hero__remove button button_no-background" onClick={ onRemoveClick }>
         <FontAwesom name="times" />
       </button>
     </li>
