@@ -11,12 +11,17 @@ export const EditHero = ( { hero, onChangeHeroName, goBack } ) => {
     <section className="section">
       <h2 className="header header_h2">{ hero.name } details!</h2>
       <form>
-        <label htmlFor="heroId">id:</label>
-        <input id="heroId" type="text" value={ hero.id } readOnly />
-        <label htmlFor="heroName">name:</label>
-        <input id="heroName" type="text" value={ hero.name } onChange={ onChange } /> 
+        <div className="form__section">
+          <label htmlFor="heroId">id:</label>
+          <input className="form__input input" id="heroId" type="text" value={ hero.id } readOnly />
+          <FontAwesome className="input__icon" name="lock" />
+        </div>
+        <div className="form__section">
+          <label htmlFor="heroName">name:</label>
+          <input className="form__input input" id="heroName" type="text" value={ hero.name } onChange={ onChange } />
+        </div>
       </form>
-      <button onClick={ goBack }>
+      <button className="form_button button" onClick={ goBack }>
         <FontAwesome name="reply" />
         <span> Back</span>
       </button>
