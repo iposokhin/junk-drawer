@@ -1,4 +1,4 @@
-import { ADD_HERO, EDIT_HERO, REMOVE_HERO, SELECT_HERO } from './actions';
+import { ADD_HERO, EDIT_HERO, REMOVE_HERO, SELECT_HERO, ADD_TO_TOP, REMOVE_FROM_TOP } from './actions';
 
 let freeId = 0;
 
@@ -28,6 +28,20 @@ export const removeHero = ( id ) => {
 export const selectHero = ( id ) => {
   return {
     type: SELECT_HERO,
+    id: id
+  }
+}
+
+export const addToTop =( id ) => {
+  return {
+    type: ADD_TO_TOP,
+    id: id
+  }
+}
+
+export const removeFromTop = ( id ) => {
+  return {
+    type: REMOVE_FROM_TOP,
     id: id
   }
 }

@@ -1,34 +1,22 @@
 import { combineReducers } from 'redux';
-import { ADD_HERO, EDIT_HERO, REMOVE_HERO, SELECT_HERO } from './../actions/actions';
-
-const hero = ( state = {}, action ) => {
-  switch ( action.type ) {
-    case ADD_HERO :
-    case EDIT_HERO :
-      return {
-        ...state,
-        [ action.id ] : {
-          id: action.id,
-          name: action.name
-        }
-      }
-
-    case REMOVE_HERO :
-      let newState = Object.assign( {}, state );
-      delete newState[ action.id ];
-      return newState
-    default :
-      return state;
-  }
-}
+import { ADD_HERO, EDIT_HERO, REMOVE_HERO, SELECT_HERO, ADD_TO_TOP, REMOVE_FROM_TOP } from './../actions/actions';
 
 const heroes = ( state = {}, action ) => {
   switch ( action.type ) {
     case ADD_HERO :
     case EDIT_HERO : 
-      return Object.assign( {}, hero( state, action ) );
+      return Object.assign( {}, {
+        ...state,
+        [ action.id ] : {
+          id: action.id,
+          name: action.name
+        }
+      } );
+
     case REMOVE_HERO :
-      return Object.assign( {}, hero( state, action ) );
+      let newState = Object.assign( {}, state );
+      delete newState[ action.id ];
+      return newState
 
     default : 
       return state;
@@ -45,7 +33,24 @@ const selectedHero = ( state = null, action ) => {
   }
 }
 
+const top = ( state = [], action ) => {
+  switch ( action.type ) {
+    case ADD_TO_TOP :
+      if ( state.indexOf( action.id ) > -1 ) {
+        return state;
+      }
+      return Array.of( ...state, action.id );
+
+    case REMOVE_FROM_TOP :
+      return state.filter( ( el ) => el !== action.id );
+
+    default :
+      return state;
+  }
+}
+
 export const heroesApp = combineReducers( {
   heroes,
-  selectedHero
+  selectedHero,
+  top
 } );
