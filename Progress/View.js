@@ -1,9 +1,7 @@
-class roundProgressUI {
+class ProgressView {
   constructor( targetNode = document.body ) {
 
-    this.state = {
-      progress: 0
-    }
+    this.model = new ProgressModel();
 
     let canvas = new Canvas();
     let loadArea = new LoadArea();
@@ -14,13 +12,14 @@ class roundProgressUI {
 
     targetNode.appendChild( canvas.node );
 
+    this.model.registerListener( canvas );
+
     setInterval( () => {
-      ++this.state.progress
-      canvas.update( this.state );
-    }, 5000 );
+      this.model.stateChanges = { progress: ++this.model.currentState.progress }
+    }, 10000 );
   }
 }
 
-let progress = new roundProgressUI;
+let progress = new ProgressView();
 
 console.dir( progress );
