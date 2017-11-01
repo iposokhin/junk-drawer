@@ -4,7 +4,7 @@ class LoadLine extends Component {
     this.createNode( 'path' );
 
     this.setAttributes( {
-      'd': describeArc( 250, 250, 50, 0, 0 ),
+      'd': this.describeArc( 250, 250, 50, 0, 0 ),
       'stroke': '#ffdb4d',
       'stroke-width': 5,
       'fill-opacity': 0,
@@ -29,5 +29,12 @@ class LoadLine extends Component {
     let d = `M ${ start.x } ${ start.y } A ${ radius } ${ radius }, 0, ${ largeArcFlag }, 0, ${ end.x } ${ end.y }`;
   
     return d;       
+  }
+
+  update( { progress } ) {
+    let loadCoeff = 359.9 / 100;
+    this.setAttributes( {
+      'd': this.describeArc( 250, 250, 50, 0, progress * loadCoeff )
+    } );
   }
 }

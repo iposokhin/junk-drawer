@@ -1,6 +1,7 @@
 class Component {
   constructor() {
     this.node;
+    this.children = [];
   }
 
   createNode( nodeName, ns = "http://www.w3.org/2000/svg" ) {
@@ -14,7 +15,14 @@ class Component {
     }
   }
 
-  appendNode( childNode ) {
-    this.node.appendChild( childNode )
+  appendNode( child ) {
+    this.node.appendChild( child.node )
+    this.children.push( child );
+  }
+
+  update( state ) {
+    if ( this.children.length !== 0 ) {
+      this.children.forEach( child => child.update( state ) );
+    }
   }
 }
