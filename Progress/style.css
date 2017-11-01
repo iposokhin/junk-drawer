@@ -2,12 +2,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
-.progress {
-  position: absolute;
-  right: 50%;
-  top: 50%;
-  margin-right: -250px;
-  margin-top: -250px;
-}

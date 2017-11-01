@@ -2,6 +2,7 @@ class Component {
   constructor() {
     this.node;
     this.children = [];
+    this.ownState;
   }
 
   createNode( nodeName, ns = "http://www.w3.org/2000/svg" ) {

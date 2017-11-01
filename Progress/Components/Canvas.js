@@ -10,4 +10,18 @@ class Canvas extends Component {
       'class': 'progress'
     } );
   }
+
+  update( state ) {
+    this.ownState = Object.assign( {}, this.ownState, state );
+
+    if ( state.hide ) {
+      this.setAttributes( {
+        'visibility': 'hidden'
+      } );
+    } else {
+      this.setAttributes( {
+        'visibility': 'visible'
+      } )
+    }
+  }
 }

@@ -31,10 +31,33 @@ class LoadLine extends Component {
     return d;       
   }
 
-  update( { progress } ) {
+  update( state ) {
+
     let loadCoeff = 359.9 / 100;
+
     this.setAttributes( {
-      'd': this.describeArc( 250, 250, 50, 0, progress * loadCoeff )
+      'd': this.describeArc( 250, 250, 50, 0, state.progress * loadCoeff )
     } );
+
+    if ( state.animate !== this.ownState.animate ) {
+      let animationIndex = this.children.findIndex( ( child ) => {
+        return child instanceof Animation;
+      } );
+
+      if ( animationIndex >= 0 ) {
+        if ( state.animate ) {
+          this.children[ animationIndex ].run();
+        } else {
+          this.children[ animationIndex ].stop();
+        }
+      } else {
+        let animation = new Animation();
+
+        this.appendNode( animation );
+        animation.run();
+      }
+    }
+
+    this.ownState = Object.assign( {}, this.ownState, state );
   }
 }

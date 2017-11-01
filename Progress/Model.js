@@ -10,7 +10,8 @@ class ProgressModel {
     this.listeners = [];
   }
 
-  registerListener( listener ) {
+  registerListener( listener ) {    
+    listener.ownState = Object.assign( {}, listener.ownState, this.currentState );
     this.listeners.push( listener );
   }
 
@@ -35,7 +36,3 @@ class ProgressModel {
     this.notifyListeners();
   }
 }
-
-let model = new ProgressModel();
-
-console.dir( model );
