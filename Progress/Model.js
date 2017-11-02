@@ -11,7 +11,6 @@ class ProgressModel {
   }
 
   registerListener( listener ) {    
-    listener.ownState = Object.assign( {}, listener.ownState, this.currentState );
     this.listeners.push( listener );
   }
 
@@ -23,16 +22,16 @@ class ProgressModel {
     }
   }
 
-  notifyListeners() {
-    this.listeners.forEach( listener => listener.update( this.state ) );
+  notifyListeners( action ) {
+    this.listeners.forEach( listener => listener.update( this.currentState, action ) );
   }
 
   get currentState() {
     return this.state;
   }
 
-  set stateChanges( newState ) {
-    this.state = Object.assign( this.state, newState );
-    this.notifyListeners();
+  setStateChanges( newState, action ) {
+    this.state = Object.assign( {}, this.state, newState );
+    this.notifyListeners( action );
   }
 }

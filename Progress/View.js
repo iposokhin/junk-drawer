@@ -7,7 +7,6 @@ class ProgressView {
     
     this.eventHappened = this.eventHappened.bind( this );
 
-    this.targetNode.addEventListener( 'input', this.eventHappened );
     this.targetNode.addEventListener( 'change', this.eventHappened )
   }
 
@@ -29,76 +28,71 @@ class ProgressView {
 
   createControls() {
     let form = new Form( {
-      'class': 'progress-form form'
+      'class': 'progress__form form'
     } );
 
     let valueContainer = new Container( {
-      'class': 'progress-form__box box'
+      'class': 'form__box box'
     } );
 
     let valueLabel = new Label( {
-      'class': 'progress-form__label label',
+      'class': 'form__label label',
       'for': 'valueInput'
     } );
 
     valueLabel.createTextNode( 'Value' );
 
     let valueInput = new Input( {
-      'class': 'progress-form__input input',
+      'class': 'form__input input',
       'id': 'valueInput',
       'type': 'number',
       'max': 100,
       'min': 0
     } );
 
-    valueContainer.appendNode( valueInput );
-    valueContainer.appendNode( valueLabel );
+    valueContainer.appendNode( valueInput, valueLabel );
 
 
     let animateContainer = new Container( {
-      'class': 'progress-form__box box'
+      'class': 'form__box box'
     } );
 
     let animateLabel = new Label( {
-      'class': 'progress-form__label label',
+      'class': 'form__label label',
       'for': 'animateInput'
     } );
 
     animateLabel.createTextNode( 'Animate' );
 
     let animateInput = new Input( {
-      'class': 'progress-form__input input',
+      'class': 'form__input input input_type_check',
       'id': 'animateInput',
       'type': 'checkbox'
     } );
 
-    animateContainer.appendNode( animateInput );
-    animateContainer.appendNode( animateLabel );
+    animateContainer.appendNode( animateInput, animateLabel );
 
 
     let hideContainer = new Container( {
-      'class': 'progress-form__box box'
+      'class': 'form__box box'
     } );
 
     let hideLabel = new Label( {
-      'class': 'progress-form__label label',
+      'class': 'form__label label',
       'for': 'hideInput'
     } );
 
     hideLabel.createTextNode( 'Hide' );
 
     let hideInput = new Input( {
-      'class': 'progress-form__input input',
+      'class': 'form__input input input_type_check',
       'id': 'hideInput',
       'type': 'checkbox'
     } );
 
-    hideContainer.appendNode( hideInput );
-    hideContainer.appendNode( hideLabel );
+    hideContainer.appendNode( hideInput, hideLabel );
 
-    form.appendNode( valueContainer );
-    form.appendNode( animateContainer );
-    form.appendNode( hideContainer );
+    form.appendNode( valueContainer, animateContainer, hideContainer );
 
     this.targetNode.appendChild( form.node );
   }

@@ -2,7 +2,6 @@ class Component {
   constructor() {
     this.node;
     this.children = [];
-    this.ownState;
   }
 
   createNode( nodeName, ns = "http://www.w3.org/2000/svg" ) {
@@ -16,14 +15,23 @@ class Component {
     }
   }
 
-  appendNode( child ) {
-    this.node.appendChild( child.node )
-    this.children.push( child );
+  appendNode( ...children ) {
+    children.forEach( child => {
+      this.node.appendChild( child.node )
+      this.children.push( child );
+    } );
   }
 
-  update( state ) {
-    if ( this.children.length !== 0 ) {
-      this.children.forEach( child => child.update( state ) );
+  removeNode( node ) {
+    let nodeIndex = this.children.indexOf( node );
+
+    if ( nodeIndex >= 0 ) {
+      this.node.removeChild( this.children[ nodeIndex ].node );
+      this.children.splice( nodeIndex, 1 );
     }
+  }
+
+  update( state, action ) {
+
   }
 }

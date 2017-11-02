@@ -4,10 +4,10 @@ class Canvas extends Component {
     this.createNode( 'svg' );
 
     this.setAttributes( {
-      'width': 500,
-      'height': 500,
-      'viewBox': '0 0 500 500',
-      'class': 'progress'
+      'width': 180,
+      'height': 180,
+      'viewBox': '0 0 180 180',
+      'class': 'progress__canvas'
     } );
   }
 
@@ -16,11 +16,11 @@ class Canvas extends Component {
 
     if ( state.hide ) {
       this.setAttributes( {
-        'visibility': 'hidden'
+        'style': 'display: none;'
       } );
     } else {
       this.setAttributes( {
-        'visibility': 'visible'
+        'style': 'display: block;'
       } )
     }
   }

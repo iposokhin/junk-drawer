@@ -4,11 +4,11 @@ class LoadLine extends Component {
     this.createNode( 'path' );
 
     this.setAttributes( {
-      'd': this.describeArc( 250, 250, 50, 0, 0 ),
+      'd': this.describeArc( 90, 90, 80, 0, 0 ),
       'stroke': '#ffdb4d',
-      'stroke-width': 5,
+      'stroke-width': 10,
       'fill-opacity': 0,
-      'class': 'progress_loaded'
+      'class': 'canvas__loaded loaded'
     } );
   }
 
@@ -31,33 +31,30 @@ class LoadLine extends Component {
     return d;       
   }
 
-  update( state ) {
-
+  setNewValue( { progress } ) {
     let loadCoeff = 359.9 / 100;
-
     this.setAttributes( {
-      'd': this.describeArc( 250, 250, 50, 0, state.progress * loadCoeff )
+      'd': this.describeArc( 90, 90, 80, 0, progress * loadCoeff )
     } );
+  }
 
-    if ( state.animate !== this.ownState.animate ) {
-      let animationIndex = this.children.findIndex( ( child ) => {
-        return child instanceof Animation;
-      } );
+  setAnimate( { animate } ) {
 
-      if ( animationIndex >= 0 ) {
-        if ( state.animate ) {
-          this.children[ animationIndex ].run();
-        } else {
-          this.children[ animationIndex ].stop();
-        }
-      } else {
-        let animation = new Animation();
-
-        this.appendNode( animation );
-        animation.run();
-      }
+    if ( animate ) {
+      this.appendNode( new Animation() );
+    } else {
+      let animations = this.children.filter( child => child instanceof Animation );
+      animations.forEach( animation => {
+        this.removeNode( animation );
+      } )
     }
+  }
 
-    this.ownState = Object.assign( {}, this.ownState, state );
+  update( state, action ) {
+    if ( action === 'value' ) {
+      this.setNewValue( state );
+    } else if ( action === 'animate' ) {
+      this.setAnimate( state );
+    }
   }
 }

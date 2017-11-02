@@ -7,21 +7,10 @@ class Animation extends Component {
       'attributeName': 'transform',
       'attributeType': 'XML',
       'type': 'rotate',
-      'from': '0 250 250',
-      'to': '360 250 250',
+      'from': '0 90 90',
+      'to': '360 90 90',
       'dur': '3s',
-    } );
-  }
-
-  run() {
-    this.setAttributes( {
       'repeatCount': 'indefinite'
-    } )
-  }
-
-  stop() {
-    this.setAttributes( {
-      'repeatCount': '0'
-    } )
+    } );
   }
 }

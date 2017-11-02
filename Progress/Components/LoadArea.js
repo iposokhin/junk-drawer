@@ -4,13 +4,13 @@ class LoadArea extends Component {
     this.createNode( 'circle' );
     
     this.setAttributes( {
-      'cx': 250,
-      'cy': 250,
-      'r': 50,
+      'cx': 90,
+      'cy': 90,
+      'r': 80,
       'stroke': '#efefec',
-      'stroke-width': 5,
+      'stroke-width': 10,
       'fill-opacity': 0,
-      'class': 'progress_load-area'
+      'class': 'canvas_load-area load-area'
     } );
   }
 }
