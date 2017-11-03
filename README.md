@@ -51,3 +51,23 @@ The design was received when I'm looked for a job. I had spend very much time fo
 
 ### Demo
 Demo on my youtube [channel](https://youtu.be/H0lRykz-x1M).
+
+
+
+## Progress ( mobile )
+
+### Description
+It was a fun test task. I applied a MVC pattern when perform it. Target devices - mobile. 
+
+### Demo
+Demo on my youtube [channel](https://youtu.be/n1algnWIdE4).
+
+
+
+## Quiz
+
+### Description
+This project is simple app that was created when I have been answer the question in stackoverflow. I applied new ES6 and ES7 features. The code turned out plain and clear.
+
+### Demo
+Demo on my youtube [channel](https://youtu.be/LXBGEXoR8wo).
