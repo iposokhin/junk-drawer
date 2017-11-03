@@ -9,7 +9,7 @@ class Animation extends Component {
       'type': 'rotate',
       'from': '0 90 90',
       'to': '360 90 90',
-      'dur': '3s',
+      'dur': '1s',
       'repeatCount': 'indefinite'
     } );
   }

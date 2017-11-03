@@ -7,23 +7,22 @@ class ProgressView {
     
     this.eventHappened = this.eventHappened.bind( this );
 
-    this.targetNode.addEventListener( 'change', this.eventHappened )
+    this.targetNode.addEventListener( 'change', this.eventHappened );
+    this.targetNode.addEventListener( 'input', this.eventHappened )
   }
 
   createView() {
     let canvas = new Canvas();
-
-    this.model.registerListener( canvas );
     
     let loadArea = new LoadArea();
     let loadLine = new LoadLine();
-
-    this.model.registerListener( loadLine );
 
     canvas.appendNode( loadArea );
     canvas.appendNode( loadLine );
 
     this.targetNode.appendChild( canvas.node );
+
+    this.model.registerListener( canvas );
   }
 
   createControls() {
@@ -98,6 +97,6 @@ class ProgressView {
   }
 
   eventHappened( e ) {
-    this.controller.changeState( e );
+    this.controller.handleEvent( e );
   }
 }

@@ -51,6 +51,8 @@ class LoadLine extends Component {
   }
 
   update( state, action ) {
+    super.update( state, action );
+    
     if ( action === 'value' ) {
       this.setNewValue( state );
     } else if ( action === 'animate' ) {

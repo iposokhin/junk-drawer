@@ -11,7 +11,9 @@ class Canvas extends Component {
     } );
   }
 
-  update( state ) {
+  update( state, action ) {
+    super.update( state, action );
+
     this.ownState = Object.assign( {}, this.ownState, state );
 
     if ( state.hide ) {

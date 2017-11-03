@@ -32,6 +32,10 @@ class Component {
   }
 
   update( state, action ) {
-
+    if ( this.children.length !== 0 ) {
+      this.children.forEach( child => {
+        child.update( state, action );
+      } );
+    }
   }
 }
