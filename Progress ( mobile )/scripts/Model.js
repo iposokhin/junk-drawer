@@ -12,6 +12,7 @@ class ProgressModel {
 
   registerListener( listener ) {    
     this.listeners.push( listener );
+    listener.update( this.currentState, 'init' );
   }
 
   removeListener( listener ) {
