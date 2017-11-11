@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
 
+.yellow {
+  color: #ffcb05;
+}
+
+.black {
+  color: #000;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: rgb( 250, 250, 250 );
@@ -93,12 +101,14 @@ body {
   cursor: pointer;
   color: #fff;
   padding: 10px;
+  outline: none;
 }
 
 .button_no-background {
   background-color: transparent;
   color: rgb( 40, 40, 50 );
   padding: 0;
+  margin-left: 5px;
 }
 
 .list {
@@ -120,7 +130,7 @@ body {
   padding: 10px;
 }
 
-.hero__remove {
+.hero__operations {
   margin-left: auto;
 }
 

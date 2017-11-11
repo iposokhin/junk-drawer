@@ -12,16 +12,13 @@ class ProgressView {
   }
 
   createView() {
-    let canvas = new Canvas();
-    
+    let canvas = new Canvas();    
     let loadArea = new LoadArea();
     let loadLine = new LoadLine();
 
-    canvas.appendNode( loadArea );
-    canvas.appendNode( loadLine );
+    canvas.appendNode( loadArea, loadLine );
 
     this.targetNode.appendChild( canvas.node );
-
     this.model.registerListener( canvas );
   }
 

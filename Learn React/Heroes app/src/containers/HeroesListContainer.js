@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 import { HeroesList } from '../components/HeroesList';
-import { selectHero, removeHero } from '../actions/action-creators';
+import { selectHero, removeHero, addToTop, removeFromTop } from '../actions/action-creators';
 
-const mapStateToProps = ( { heroes, selectedHero } ) => {
+const mapStateToProps = ( { heroes, selectedHero, top } ) => {
   return {
     heroes: heroes,
-    selectedHero: selectedHero
+    selectedHero: selectedHero,
+    top: top
   }
 }
 
@@ -14,11 +15,14 @@ const mapDispatchToProps = ( dispatch ) => {
     onHeroClick: ( id ) => {
       dispatch( selectHero( id ) );
     },
-    onRemoveClick: ( id, selected ) => {
-      if ( selected ) {
-        dispatch( selectHero( null ) );
-      }
+    onRemoveClick: ( id ) => {
       dispatch( removeHero( id ) );
+    },
+    onAddToTopClick: ( id ) => {
+      dispatch( addToTop( id ) );
+    },
+    onRemoveFromTopClick: ( id ) => {
+      dispatch( removeFromTop( id ) );
     }
   }
 }
