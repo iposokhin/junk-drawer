@@ -1,0 +1,155 @@
+/* ----------------Settings--------------- */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic");
+.text-dark {
+  color: #272727 !important; }
+
+.text-white {
+  color: #fff !important; }
+
+.text-orange {
+  color: #e8aa4e !important; }
+
+.text-gray {
+  color: #b0b0b0 !important; }
+
+.text-slight {
+  font-weight: 300 !important; }
+
+.text-normal {
+  font-weight: 400 !important; }
+
+.text-bold {
+  font-weight: 600 !important; }
+
+.text-bolder {
+  font-weight: 700 !important; }
+
+.bgc-dark {
+  background-color: #272727; }
+
+.bgc-white {
+  background-color: #fff; }
+
+.bgc-orange {
+  background-color: #e8aa4e; }
+
+.bgc-gray {
+  background-color: #b0b0b0; }
+
+/* ---------------------- Default -------------------------- */
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px; }
+
+h1 {
+  font-size: 2.2em !important; }
+
+input {
+  border: 0.5px solid #b0b0b0;
+  outline: none; }
+
+label {
+  font-size: .7em; }
+
+.hero-gallery {
+  height: 48.4vw; }
+
+.header {
+  margin-top: 6.67vw;
+  margin-bottom: 4vw; }
+
+.header::after {
+  content: '';
+  background-image: url("../assets/some.svg");
+  background-repeat: no-repeat;
+  width: 6.67vw;
+  height: 1.2vw;
+  display: block;
+  margin: 1.47vw auto; }
+
+.heroes {
+  list-style-type: none;
+  height: 20vw; }
+
+.hero__miniature {
+  object-fit: cover;
+  width: 8.47vw;
+  height: 8.47vw; }
+
+.hero__name, .hero__join {
+  padding-top: 1vw;
+  padding-bottom: 1vw; }
+
+.join {
+  font-size: .7em; }
+
+.nickname {
+  font-size: .8em; }
+
+.carousel-indicators {
+  top: auto;
+  bottom: -5.3vw; }
+  .carousel-indicators .indicator {
+    width: .6vw;
+    height: .6vw;
+    background-color: #fff; }
+  .carousel-indicators .active {
+    background-color: #e8aa4e; }
+
+.heroes-form > .row {
+  margin-top: 2vw; }
+  .heroes-form > .row:first-child, .heroes-form > .row:last-child {
+    margin-top: 0; }
+
+.hero-name {
+  width: 45%; }
+
+.hero-face {
+  display: none; }
+
+.hero-face__wrapper {
+  border: 0.5px solid #b0b0b0;
+  width: 100%;
+  height: 7.2vw;
+  font-size: .6em;
+  cursor: pointer; }
+
+.hero-face__value {
+  position: absolute;
+  top: 50%; }
+
+.hero-submit {
+  width: 11vw;
+  height: 2.67vw;
+  min-width: 100px;
+  min-height: 25px;
+  border: none;
+  margin-top: 6vw;
+  margin-bottom: 6.67vw;
+  font-size: .8em;
+  cursor: pointer; }
+
+.hero-info {
+  height: 6.13vw;
+  font-size: .6em; }
+
+.social-icon {
+  border: 2px solid #b0b0b0;
+  width: 2vw;
+  height: 2vw;
+  min-height: 15px;
+  min-width: 15px;
+  border-radius: 50%;
+  font-size: 1.2em; }
+
+.heroes-company:link, .heroes-company:visited, .social-icon:link, .social-icon:visited {
+  color: #b0b0b0; }
+
+.social-icon:not(:first-child) {
+  margin-left: 13px; }
+
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 14px; }
+  .social-icon {
+    font-size: .9em; } }
