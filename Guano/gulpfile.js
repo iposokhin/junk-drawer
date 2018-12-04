@@ -31,8 +31,9 @@ gulp.task( 'copy:fonts', () => {
 } )
 
 gulp.task( 'sassToCss', () => {
-  return gulp.src( 'src/scss/*.scss' )
+  return gulp.src( ['src/scss/*.scss', 'src/scss/config/**/*.scss'] )
     .pipe( scss() )
+    .pipe( flatten() )
     .pipe( gulp.dest( 'src/css/' ) )
     .pipe( browserSync.stream() );
 } );
@@ -42,8 +43,8 @@ gulp.task( 'serve', ['sassToCss'], () => {
     server: './src'
   } );
 
-  gulp.watch( ['src/**/bootstrap.scss', 'src/scss/*.scss'], ['sassToCss'] );
-  gulp.watch( 'src/index.html' ).on( 'change', browserSync.reload );
+  gulp.watch( ['src/scss/*.scss', 'src/scss/config/**/*.scss'], ['sassToCss'] );
+  gulp.watch( ['src/index.html', 'src/js/*.js'] ).on( 'change', browserSync.reload );
 } );
 
 gulp.task( 'default', [ 'serve' ] );

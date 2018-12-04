@@ -36,7 +36,7 @@
 .bgc-gray {
   background-color: #b0b0b0; }
 
-/* ---------------------- Default -------------------------- */
+/* ---------------------- Desktop -------------------------- */
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px; }
@@ -52,7 +52,8 @@ label {
   font-size: .7em; }
 
 .hero-gallery {
-  height: 48.4vw; }
+  height: 48.4vw;
+  min-height: 420px; }
 
 .header {
   margin-top: 6.67vw;
@@ -64,12 +65,16 @@ label {
   background-repeat: no-repeat;
   width: 6.67vw;
   height: 1.2vw;
+  min-width: 60px;
+  min-height: 15px;
   display: block;
   margin: 1.47vw auto; }
 
 .heroes {
   list-style-type: none;
-  height: 20vw; }
+  height: 20vw;
+  min-height: 210px;
+  padding: 0; }
 
 .hero__miniature {
   object-fit: cover;
@@ -85,16 +90,6 @@ label {
 
 .nickname {
   font-size: .8em; }
-
-.carousel-indicators {
-  top: auto;
-  bottom: -5.3vw; }
-  .carousel-indicators .indicator {
-    width: .6vw;
-    height: .6vw;
-    background-color: #fff; }
-  .carousel-indicators .active {
-    background-color: #e8aa4e; }
 
 .heroes-form > .row {
   margin-top: 2vw; }
@@ -131,14 +126,15 @@ label {
 
 .hero-info {
   height: 6.13vw;
+  min-height: 65px;
   font-size: .6em; }
 
 .social-icon {
   border: 2px solid #b0b0b0;
   width: 2vw;
   height: 2vw;
-  min-height: 15px;
-  min-width: 15px;
+  min-height: 25px;
+  min-width: 25px;
   border-radius: 50%;
   font-size: 1.2em; }
 
@@ -148,8 +144,56 @@ label {
 .social-icon:not(:first-child) {
   margin-left: 13px; }
 
-@media only screen and (max-width: 1024px) {
+/* ---------------------- Laptop -------------------------- */
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 16px; }
+  .hero__miniature {
+    object-fit: cover;
+    width: 10vw;
+    height: 10vw; }
+  .slick-dots {
+    bottom: -5.5vw; }
+  .hero-gallery {
+    height: 55vw; }
+  .hero-face__wrapper {
+    height: 150px; } }
+
+/* ---------------------- Tablet -------------------------- */
+@media only screen and (max-width: 769px) {
   html {
     font-size: 14px; }
-  .social-icon {
-    font-size: .9em; } }
+  .hero__miniature {
+    object-fit: cover;
+    width: 15vw;
+    height: 15vw;
+    min-height: 120px;
+    min-width: 120px; }
+  .hero-gallery {
+    height: 60vw; }
+  .slick-dots {
+    bottom: -7.5vw; } }
+
+/* ---------------------- Mobile -------------------------- */
+@media only screen and (max-width: 512px) {
+  html {
+    font-size: 18px; }
+  h1 {
+    font-size: 1.2em !important; }
+  .hero__miniature {
+    object-fit: cover;
+    width: 190px;
+    height: 190px; }
+  .hero-gallery {
+    height: 100% !important; }
+  .heroes {
+    height: inherit; }
+  .social-icons {
+    justify-content: center !important;
+    margin-top: 5px !important; }
+  .info-block {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: space-around !important; }
+  .hero-face__wrapper {
+    height: 100px; } }
