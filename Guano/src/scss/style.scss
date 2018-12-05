@@ -121,7 +121,9 @@ label {
 }
 
 .hero-face {
-	display: none;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .hero-face__wrapper {
