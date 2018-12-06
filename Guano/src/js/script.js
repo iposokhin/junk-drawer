@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	
+// slick-carousel config
   $('.heroes').slick({
   	infinite: true,
   	slidesToShow: 4,
@@ -28,30 +30,74 @@ $(document).ready(function(){
   	]
   } );
 
-  let dropZone = document.querySelector('#hero-face'),
-  	  maxFileSize = 1000000;
-
-  dropZone.ondragover = ( e ) => {
-  	e.stopPropagation();
-  	e.preventDefault();
-  	e.dataTransfer.dropEffect = 'copy';
-  	console.dir( e );
-  	return false;
-  };
 
 
-  dropZone.ondrop = ( e ) => {
-  	e.stopPropagation();
-  	e.preventDefault();
-  	e.dataTransfer.dropEffect = 'copy';
-  	console.dir( e.dataTransfer.files[0] );
-  	let reader = new FileReader();
-  	reader.onload = ( event ) => {
-  		console.dir( event );
-  	}
-  	console.dir( reader.readAsDataURL(e.dataTransfer.files[0]) );
+  let dropZone = document.querySelector('#hero-face');
 
-  	return false;
-  } 
+  dropZone.ondrop = imageLoad;
+  dropZone.onchange = imageLoad;
 });
 
+function imageLoad ( e ) {
+	e.stopPropagation();
+	e.preventDefault();
+
+	let eventType = e.type,
+		file;
+
+	if ( eventType == 'drop' ) {
+		file = e.dataTransfer.files[0];
+	} else if ( eventType == 'change' ) {
+		file = this.files[0];
+	}
+
+	let fileSize = file.size;
+	if( isLarge( fileSize ) ) return console.error( 'Файл слишком большой!!!' );
+
+	let fileMIME = file.type;	
+	if ( !isImage( fileMIME )) return console.error( 'Вы загрузили не изображение!!!' );
+
+	readFile( file );
+}
+
+function isLarge( size ) {
+	return size > 1000000 ? true : false;
+}
+
+function readFile( file ) {
+	let reader = new FileReader();
+		reader.readAsDataURL( file );
+	reader.onload = ( e ) => imageLoaded( e, file );
+}
+
+function isImage( fileMIME ) {
+	if ( fileMIME.search( /image.*/ ) != -1 ) {
+		return true;
+	}
+	return false;
+}
+
+function changeElState ( el, propState, newState ) {
+	if ( !HTMLElement.prototype.isPrototypeOf( el ) ) {
+		return console.error( 'Вы передали не HTML-элемент!!!' )
+	}
+	el[propState] = newState;
+	return false;
+}
+
+function imageLoaded ( e, file ) {
+	let data = e.target.result;
+	changeFileInputValue( data );
+	changeLabelText( `Загружено изображение ${ file.name }` );
+	return false;
+}
+
+function changeFileInputValue ( value ) {
+	let input = document.querySelector('#hero-face');
+	return changeElState( input, 'myValue', value );
+}
+
+function changeLabelText ( text ) {
+	let label = document.querySelector('.hero-face__value');
+	return changeElState( label, 'innerHTML', text );
+}
