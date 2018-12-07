@@ -22,85 +22,23 @@
           </h1>
         </div>
       </div>
-
           <ul class="row heroes">
             <li class="col hero">
-              <img class="hero__miniature img-fluid rounded-circle mx-auto d-block" src="assets/jason.jpg" alt="Jason">
+              <img class="hero__miniature img-fluid rounded-circle mx-auto d-block" src="assets/photo.jpg" alt="Your Photo">
               <div class="hero__name d-flex flex-column text-center">
-                <span class="text-bolder">Джейсон Стейтем</span>
-                <span class="hero__nickname nickname">Мастер ножей</span>
+                <span class="text-bolder">Герой нашего времени</span>
+                <span class="hero__nickname nickname">Великий</span>
               </div>
               <div class="hero__join join d-flex flex-column text-center">
                 <span>
                   Дата вступления в команду:
                 </span>
                 <span>
-                  26.08.1967
-                </span>
-              </div>
-            </li>
-            <li class="col hero">
-              <img class="hero__miniature img-fluid rounded-circle mx-auto d-block" src="assets/bruce.jpg" alt="Bruce">
-              <div class="hero__name d-flex flex-column text-center">
-                <span class="text-bolder">Брюс Ли</span>
-                <span class="hero__nickname nickname">Фанат супермена</span>
-              </div>
-              <div class="hero__join join d-flex flex-column text-center">
-                <span>
-                  Дата вступления в команду:
-                </span>
-                <span>
-                  27.02.1973
-                </span>
-              </div>                    
-            </li>
-            <li class="col hero">
-              <img class="hero__miniature img-fluid rounded-circle mx-auto d-block" src="assets/van.jpg" alt="Van">
-              <div class="hero__name d-flex flex-column text-center">
-                <span class="text-bolder">Ван Дамм</span>
-                <span class="hero__nickname nickname">Танцор</span>
-              </div>
-              <div class="hero__join join d-flex flex-column text-center">
-                <span>
-                  Дата вступления в команду:
-                </span>
-                <span>
-                  18.10.1960
-                </span>
-              </div>                    
-            </li>
-            <li class="col hero">
-              <img class="hero__miniature img-fluid rounded-circle mx-auto d-block" src="assets/silvestr.jpg" alt="Silvester">
-              <div class="hero__name d-flex flex-column text-center">
-                <span class="text-bolder">Сильвестр Сталоне</span>
-                <span class="hero__nickname nickname">Полуликий</span>
-              </div>
-              <div class="hero__join join d-flex flex-column text-center">
-                <span>
-                  Дата вступления в команду:
-                </span>
-                <span>
-                  06.08.1946
-                </span>
-              </div>
-            </li>
-            <li class="col hero">
-              <img class="hero__miniature img-fluid rounded-circle mx-auto d-block" src="assets/jason.jpg" alt="Jason">
-              <div class="hero__name d-flex flex-column text-center">
-                <span class="text-bolder">Джейсон Стейтем</span>
-                <span class="hero__nickname nickname">Мастер ножей</span>
-              </div>
-              <div class="hero__join join d-flex flex-column text-center">
-                <span>
-                  Дата вступления в команду:
-                </span>
-                <span>
-                  26.08.1967
+                  21.12.2021
                 </span>
               </div>
             </li>
           </ul>
-
     </div>
   </div>
   <div class="container-fluid hero-workshop bgc-white text-dark text-normal">
