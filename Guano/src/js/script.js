@@ -1,10 +1,15 @@
 $(document).ready(function(){
 
   let heroes = getHeroesList().then( ( res ) => res.json() ).then( ( heroesList ) => {
-  	setConfig( heroesList.length );
-  	heroesList.forEach( ( hero, index, list ) => {
-  		addHero( hero );
-  	} );
+  	
+  	if ( heroesList.length > 0 ) {
+  		removeStub();
+	  	heroesList.forEach( ( hero, index, list ) => {
+	  		addHero( hero );
+	  	} );
+
+	  	setConfig( heroesList.length );
+  	}
   } );
 
   let dropZone = document.querySelector('#hero-face');
@@ -20,23 +25,37 @@ function submit ( e ) {
 	e.stopPropagation();
 
   	let data = serialize();
-  	postData( data ).then( ( res ) => res.json() ).then( (data) => addHero( data ) );
+  	postData( data ).then( ( res ) => res.json() ).then( (data) => {
+  		if ( $('.hero').length > 0 ) {
+  			console.dir( $('.hero') );
+  			$('.heroes').slick('unslick');
+  		}
+
+  		removeStub();
+  		addHero( data );
+  		setConfig( $('.heroes')[0].children.length );
+  	} );
   	clearForm();
   	
   	return false;	
 }
 
+function removeStub() {
+	$('#stub').remove();
+}
+
 function setConfig( count ) {
   	$('.heroes').slick({
   		infinite: true,
-  		slidesToShow: count >= 4 ? 4: count,
+  		slidesToShow: count >= 4 ? 4: count || 1,
   		slidesToScroll: 1,
   		dots: true,
+  		centerMode: true,
   		responsive: [
   	  	{
   	  	  breakpoint: 1024,
   	  	  settings: {
-  	  	    slidesToShow: 3,
+  	  	    slidesToShow: count >= 3 ? 3: count,
   	  	    slidesToScroll: 1,
   	  	    infinite: true,
   	  	    dots: true
@@ -60,7 +79,7 @@ function getHeroesList() {
 }
 
 function addHero( hero ) {
-	let markup = `<li class="col hero">
+	let markup = `<div class="col hero">
               			<img class="hero__miniature img-fluid rounded-circle mx-auto d-block" src=${hero.heroFace} alt=${hero.heroName}>
               			<div class="hero__name d-flex flex-column text-center">
                 			<span class="text-bolder">${hero.heroName}</span>
@@ -74,9 +93,9 @@ function addHero( hero ) {
                   				${hero.heroDate}
                 			</span>
               			</div>
-            		</li>`;
+            		</div>`;
 
-	$('.heroes').slick('slickAdd', markup);
+	$('.heroes').append( markup );
 }
 
 function postData( obj ) {

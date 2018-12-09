@@ -22,23 +22,11 @@
           </h1>
         </div>
       </div>
-          <ul class="row heroes">
-            <li class="col hero">
-              <img class="hero__miniature img-fluid rounded-circle mx-auto d-block" src="assets/photo.jpg" alt="Your Photo">
-              <div class="hero__name d-flex flex-column text-center">
-                <span class="text-bolder">Герой нашего времени</span>
-                <span class="hero__nickname nickname">Великий</span>
-              </div>
-              <div class="hero__join join d-flex flex-column text-center">
-                <span>
-                  Дата вступления в команду:
-                </span>
-                <span>
-                  21.12.2021
-                </span>
-              </div>
-            </li>
-          </ul>
+          <div class="row heroes d-flex justify-content-center">
+            <div class="col d-flex justify-content-center align-content-center" id="stub">
+              <h2 class="text-center my-auto">Героев не найдено</h2>
+            </div>
+          </div>
     </div>
   </div>
   <div class="container-fluid hero-workshop bgc-white text-dark text-normal">
