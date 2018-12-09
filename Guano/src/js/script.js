@@ -50,7 +50,6 @@ function setConfig( count ) {
   		slidesToShow: count >= 4 ? 4: count || 1,
   		slidesToScroll: 1,
   		dots: true,
-  		centerMode: true,
   		responsive: [
   	  	{
   	  	  breakpoint: 1024,
