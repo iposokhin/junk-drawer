@@ -54,6 +54,16 @@ Demo on my youtube [channel](https://youtu.be/H0lRykz-x1M).
 
 
 
+## Test task 3
+
+### Description
+Simple client-server app.
+
+### Demo
+Demo on my youtube [channel](https://youtu.be/CPtmTZD-S5o).
+
+
+
 ## Progress ( mobile )
 
 ### Description
