@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+@import url('https://fonts.googleapis.com/css?family=Prata');
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  line-height: 1.42;
+  font-size: 14px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.container {
+  max-width: 1400px;
+  width: calc(100% - 10% * 2 );
+  margin: 0 10%;
+}
+
+.jspVerticalBar {
+  width: 1px;
+  height: 100%;
+  background: #c49a6c;
+}
+
+.jspDrag {
+  background: #fff;
+  cursor: pointer;
+}
+
+
+/* ----- Mobile ----- */
+
+.sort {
+  margin-top: 60px;
+}
+
+.dropdown-form:hover .dropdown-form__content {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.dropdown-form__target {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.dropdown-form__target:before {
+  content: url(images/icon_adjustment.svg);
+  margin-right: 10px;
+}
+
+.dropdown-form__target:hover {
+  color: #c48f55;
+}
+
+.dropdown-form__content {
+  flex-basis: 100%;
+  order: 1;
+  position: absolute;
+  display: none;
+}
+
+.form__filter {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.filter__header {
+  background: #fff;
+  font-family: 'Prata', serif;
+  font-size: 1.142857142857143em;
+  text-transform: uppercase;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.filter__content {
+  background: #c49a6c;
+}
+
+.filter__group {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-basis: 100%;
+}
+
+.group__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__item {
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__item .filter__submit {
+  display: none;
+}
+
+.filter__name > .name {
+  display: none;
+}
+
+.filter__settings {
+  display: flex;
+  flex-direction: column;
+  text-transform: none;
+  padding-top: 25px !important;
+}
+
+.settings__brand {
+  overflow-y: auto;
+  overflow-x: hidden;
+  outline: none;
+  max-height: 250px;
+}
+
+.settings__item:not(:first-child) {
+  margin-top: 15px;
+}
+
+.label {
+  cursor: pointer;
+  position: relative;
+}
+
+.form__filter input:not(:checked) ~ .label {
+  color: #a3a3a3;
+}
+
+.form__filter input:not(:checked) ~ .label:hover {
+  color: #000;
+}
+
+.checkbox, .radio {
+  display: none;
+}
+
+.checkbox ~ .label:before,
+.radio ~ .label:before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #f5f5f5;
+  margin-right: 12px;
+  position: relative;
+  top: 2px;
+}
+
+.radio ~ .label:before {
+  border-radius: 50%;
+}
+
+.checkbox:checked ~ .label:before {
+  content: url(images/checkbox_checked.svg);
+  background: #c49a6c;
+}
+
+.radio:checked ~ .label:before {
+  content: url(images/radio_checked.svg);
+  background: #c49a6c;
+}
+
+.filter__submit {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.filter__submit .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit {
+  width: 244px;
+  height: 50px;
+  background: #4d4d4d;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color: #fff;
+  background: #c49a6c;
+}
+
+.product__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+
+.product__item {
+  width: 100%;
+  margin-left: 0;
+  margin-top: 8.35vw;
+  position: relative;
+}
+
+.product__available {
+  display: inline-block;
+  overflow: hidden;  
+  width: 1.42em;
+  position: absolute;
+  left: -30px;
+}
+
+.product__available_salon {
+  color: #c48f55;
+}
+
+.accessory {
+  display: inline-block;
+  white-space: nowrap;
+  transform: translate(-10%,100%) rotate(-90deg);
+  transform-origin: 0 0;
+  text-transform: uppercase;
+}
+
+.accessory:after {
+  content: "";
+  float: left;
+  margin-top: 100%;
+}
+
+.product__info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: inherit;
+}
+
+.product__pic {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,.04);
+}
+
+.product__item .product__pic:before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+
+.product__img {
+  height: auto;
+  display: block;
+  max-width: 75%;
+  margin: auto;
+  z-index: -1;
+}
+
+.product__item_sofa .product__img {
+  margin: 10%;
+  max-width: 70%;
+}
+
+.product__code {
+  margin-top: 2.8109627547435vw;
+  color: rgb(163,163,163);
+  text-transform: uppercase;
+}
+
+.product__name {
+  font-family: 'Prata', serif;
+  font-size: 1.142857142857143em;
+  margin-top: 1.054111033028812vw;
+  position: relative;
+}
+
+.product__name:after {
+  content: "";
+  background: url(images/arrow_right.svg) no-repeat;
+  width: 21px;
+  height: 17px;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+  margin-left: 20px;
+}
+
+.product__price {
+  margin-top: 1.756851721714687vw;
+  font-weight: 700;
+  color: #c48f55;
+  text-transform: uppercase;
+}
+
+.product__price_val:before,
+.product__price_query:before {
+  content: "—";
+  font-weight: 300;
+  margin-right: 5px;
+}
+
+.product__price_val:after {
+  content: "Руб.";
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #000;
+  margin-left: 5px;
+}
+
+.product__price_query {
+  font-weight: 300;
+}
+
+
+/* ----- Tablet ----- */
+
+@media only screen and (min-width: 769px) {
+  .dropdown-form {
+    width: 100%;
+    display: block;
+  }
+
+  .dropdown-form__target {
+    display: none;
+  }
+
+  .dropdown-form__content {
+    display: block;
+    width: 100%;
+    position: static;
+  }
+
+  .filter__header {
+    display: none;
+  }
+
+  .filter__content {
+    background: #fff;
+  }
+
+  .filter__group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .group__left, .group__right {
+    flex-direction: row;
+  }
+
+  .group__right .filter__name {
+    text-align: right;
+  }
+
+  .filter__item {
+    margin: 0;
+    margin-left: 4.296875vw;
+  }
+
+  .filter__item:first-child {
+    margin-left: 0;
+  }
+
+  .filter__item:last-child {
+    margin-right: 18px;
+  }
+
+  .filter__item .filter__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .dropdown__item {
+    position: relative;
+  }
+
+  .dropdown__item:after {
+    content: '';
+    width: 100%;
+    height: 100px;
+    display: block;
+    position: absolute;
+  }
+
+  .dropdown__item:hover > .dropdown__content {
+    display: block;
+  }
+
+  .dropdown__item:hover .filter__name {
+    color: #c48f55;
+  }
+
+  .dropdown__content {
+    display: none;
+    width: 20.46875vw;
+    min-width: 210px;
+    max-width: 262px;
+    background: #fff;
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    z-index: 999;
+  }
+
+  .filter__settings {
+    padding: 30px 20px !important;
+    width: calc(100% - 20px * 2);
+  }
+
+  .jspDrag {
+    background: #c49a6c;
+  }
+
+  .settings__item .name {
+    display: none;
+  }
+
+  .filter__name > .name {
+    display: inline-block;
+  }
+
+  .filter__name {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .filter__name_iconed:before {
+    content: url(images/icon_bar_chart.svg);
+    margin: 0 10px;
+  }
+  
+  .filter__name:after {
+    content: '';
+    background: url(images/arrow_down.svg) no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;    
+    width: 8px;
+    height: 5px;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+
+  .filter__submit {
+    height: 80px;
+  }
+
+  .form__filter > .filter__submit {
+    display: none;
+  }
+
+  .submit {
+    background: #fff;
+    width: 132px;
+    height: 40px;
+  }
+
+  .product__item {
+    width: 50%;
+  }
+  
+  .product__item_armchair:nth-child(4n),
+  .product__item_armchair:nth-child(4n+1) {
+    width: 40%;
+  }
+
+  .product__item_sofa .product__pic:before {
+    content: '';
+    padding-top: 80%;
+    float: left;
+  }
+}
+
+
+@media only screen and (min-width: 1025px) {
+  .product__item:nth-child(even) {
+    margin-left: 2.34375vw;
+  }
+
+  .product__item_armchair {
+    width: 50%;
+  }
+
+  .product__item_armchair:nth-child(4n),
+  .product__item_armchair:nth-child(4n+1) {
+    width: 40%;
+  }
+
+  .product__item:first-child,
+  .product__item:last-child {
+    width: 30%;
+  }
+
+  .product__item_sofa {
+    width: 60%;
+  }
+
+  .product__item_sofa .product__pic:before {
+    padding-top: 0;
+  }
+}
