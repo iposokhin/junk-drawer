@@ -1,0 +1,14 @@
+svg, #map-widget {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.shape {
+  cursor: pointer;
+}
+
+.map-label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
