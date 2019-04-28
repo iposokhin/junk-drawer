@@ -4,7 +4,9 @@ Different things
 ## Ribbon calculator
 
 ### Description
-Nice form that wrote in native JavaScript and css. This project is just an attempt to use a flexbox layout, a some material design principles and a gulp task runner.
+Nice form that wrote in native JavaScript and css. This project is just an attempt to use a flexbox layout, a some material design principles and a gulp task runner. 
+
+Branch [ribbon_calculator](https://github.com/iposokhin/junk-drawer/tree/ribbon_calculator)
 
 ### Demo
 Demo on my youtube [channel](https://www.youtube.com/watch?v=427VRbzOT-M).
@@ -14,6 +16,8 @@ Demo on my youtube [channel](https://www.youtube.com/watch?v=427VRbzOT-M).
 
 ### Description
 Simple WebRTC video chat. Only the required minimum.
+
+Branch [web_rtc](https://github.com/iposokhin/junk-drawer/tree/web_rtc)
 
 ### Demo
 Demo on my youtube [channel](https://youtu.be/jYXG8OIekow).
@@ -27,6 +31,8 @@ Interactive map ( v1 ) written in native JavaScript. It work via easy SVG manipu
 
 Version 2 ( v2 ) was written in JavaScript using a library Snap.svg.
 
+Branch [interactive_map](https://github.com/iposokhin/junk-drawer/tree/interactive_map)
+
 ### Demo
 Demo on my youtube channel:
 - [version 1](https://youtu.be/J5P-4pHzh6E).
@@ -39,6 +45,8 @@ Demo on my youtube channel:
 ### Description
 Simple static markup.
 
+Branch [test_task_1](https://github.com/iposokhin/junk-drawer/tree/test_task_1)
+
 ### Demo
 Demo on my youtube [channel](https://youtu.be/eIFUGWeh6uI).
 
@@ -48,6 +56,8 @@ Demo on my youtube [channel](https://youtu.be/eIFUGWeh6uI).
 
 ### Description
 The design was received when I'm looked for a job. I had spend very much time for do this work and hadn't sent result back. A result isn't ideal. It isn't cross-browser. But all the same result. This work is my first expirience of applying a responsive design. And a first big markup project.
+
+Branch [test_task_2](https://github.com/iposokhin/junk-drawer/tree/test_task_2)
 
 ### Demo
 Demo on my youtube [channel](https://youtu.be/H0lRykz-x1M).
@@ -59,6 +69,8 @@ Demo on my youtube [channel](https://youtu.be/H0lRykz-x1M).
 ### Description
 Simple client-server app.
 
+Branch [test_task_3](https://github.com/iposokhin/junk-drawer/tree/test_task_3)
+
 ### Demo
 Demo on my youtube [channel](https://youtu.be/CPtmTZD-S5o).
 
@@ -69,6 +81,8 @@ Demo on my youtube [channel](https://youtu.be/CPtmTZD-S5o).
 ### Description
 Another test task
 
+Branch [test_task_4](https://github.com/iposokhin/junk-drawer/tree/test_task_4)
+
 ### Demo
 Demo on my youtube [channel](https://youtu.be/uvcYDIa5BTQ).
 
@@ -77,7 +91,9 @@ Demo on my youtube [channel](https://youtu.be/uvcYDIa5BTQ).
 ## Progress ( mobile )
 
 ### Description
-It was a fun test task. I applied a MVC pattern when perform it. Target devices - mobile. 
+It was a fun test task. I applied a MVC pattern when perform it. Target devices - mobile.
+
+Branch [progress](https://github.com/iposokhin/junk-drawer/tree/progress)
 
 ### Demo
 Demo on my youtube [channel](https://youtu.be/n1algnWIdE4).
@@ -88,6 +104,8 @@ Demo on my youtube [channel](https://youtu.be/n1algnWIdE4).
 
 ### Description
 This project is simple app that was created when I have been answer the question in stackoverflow. I applied new ES6 and ES7 features. The code turned out plain and clear.
+
+Branch [quiz](https://github.com/iposokhin/junk-drawer/tree/quiz)
 
 ### Demo
 Demo on my youtube [channel](https://youtu.be/LXBGEXoR8wo).
