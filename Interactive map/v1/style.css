@@ -1,0 +1,41 @@
+body {
+  position: relative;
+}
+
+image {
+  pointer-events: none;
+  width: 8484px;
+  height: 5034px;
+  overflow: none;
+}
+
+h2 {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: rgba( 255, 255, 255, .8 );
+  justify-content: left;
+  text-transform: uppercase;
+}
+
+.svg {
+  max-width: 90%;
+  max-height: auto;
+}
+
+.shape {
+  cursor: pointer;
+}
+
+image.not-active-image {
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+image.active-image {
+  transition: opacity 1s;
+  opacity: 1;
+}
