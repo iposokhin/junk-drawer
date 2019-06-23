@@ -1,0 +1,9 @@
+.localVideo, .remoteVideo {
+  border: 1px solid red;
+  width: 400px;
+  height: 300px;
+}
+
+.callButton {
+  display: none;
+}
