@@ -1,0 +1,26 @@
+{
+  "name": "experiment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node ./index.js && nodemon ./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "faker": "^4.1.0",
+    "graphql": "^14.4.2",
+    "koa": "^2.7.0",
+    "koa-graphql": "^0.8.0",
+    "koa-router": "^7.4.0",
+    "rosie": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
