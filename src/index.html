@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Test</title>
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
+		></script>
+	</head>
+	<body>
+		<h1>Test Page</h1>
+		<p>We'll test socket work on this page.</p>
+		<form action="javascript:void(0);">
+			<input id="name" type="text">
+			<button onclick="sayHello()">Say hello</button>
+		</form>
+		<script type="text/javascript">
+			const socket = io();
+
+			const callback = (response) => {
+					const p = document.createElement("p");
+					const text = document.createTextNode(`Server: ${response}`);
+					p.appendChild(text);
+
+					document.body.appendChild(p);
+			}
+
+			const sayHello = () => {
+				const input = document.querySelector("#name")
+				const name = input.value;
+				socket.emit("hello", name, callback);
+				input.value = "";
+			};
+		</script>
+	</body>
+</html>
